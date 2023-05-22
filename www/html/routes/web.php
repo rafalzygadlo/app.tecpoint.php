@@ -21,8 +21,8 @@ Route::view('/datenschutz.html','html/datenschutz');
 Route::view('/pl/index.html','html/pl/index');
 Route::view('/pl/privacy.html','html/pl/privacy');
 //ro
-Route::view('/ro/index.html','html/pl/index');
-Route::view('/ro/privacy.html','html/pl/privacy');
+Route::view('/ro/index.html','html/ro/index');
+Route::view('/ro/privacy.html','html/ro/privacy');
 //ru
 Route::view('/ru/index.html','html/ru/index');
 Route::view('/ru/privacy.html','html/ru/privacy');
@@ -40,7 +40,6 @@ Route::group([
     'middleware' => ['auth.user']
 ], function ()
 {
-
     Route::get('/home',App\Http\Livewire\Home::class)->name('home.index');
     Route::get('/user',App\Http\Livewire\User\User::class)->name('user.index');
     Route::get('/employee',App\Http\Livewire\Employee\Employee::class)->name('employee.index');
@@ -49,10 +48,6 @@ Route::group([
 
 });
 
-
-
-
-//
 
 
 

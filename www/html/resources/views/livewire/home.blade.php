@@ -13,7 +13,6 @@
     <div class="col">
         <h3>{{ __('Employee') }}</h3>
         <a href="{{ route('employee.index') }}">Employees list</a><br>
-        <a class="nounderline" href="{{ route('rate.index') }}">Rates, bonuses</a><br>
         <a href>Transport</a><br>
         <a href>Groups</a><br>
     </div>
@@ -22,7 +21,6 @@
         <h3>{{ __('Flat') }}</h3>
         <a href="{{ route('employee.index') }}">Flats list</a><br>
         <a href="{{ route('employee.index') }}">electricity meter</a><br>
-        <a class="nounderline" href="{{ route('rate.index') }}">Rates, bonuses</a><br>
         </ul>
     </div>
 

@@ -7,7 +7,7 @@
 
     <div class="row justify-content-center">
         <div class="h-50">
-            <livewire:usr.employee.employee-table />
+            <livewire:employee.employee-table />
         </div>
     </div>
 </div>

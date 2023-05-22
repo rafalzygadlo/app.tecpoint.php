@@ -1,46 +1,13 @@
-<!DOCTYPE html>
-<html lang="pl">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Portfolio Details - Resi Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+@extends('layouts.html')
+@section('content')
   
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Resi - v4.7.0
-  * Template URL: https://bootstrapmade.com/resi-free-bootstrap-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
   
-  <section class="counts section">
     <div class="container">
       <a href="javascript:history.back()">< Wróć</a>
       <p></p>    
       <div class="row">
 
-        <div class="col-lg-12 col-md-12">
+    <div class="col-lg-12 col-md-12">
           
 
     <h2>Dane zbierane automatycznie</h2>
@@ -75,10 +42,4 @@
     </div>
   </div>
 </div>
-  
-  
-
-  
-</body>
-
-</html>
+@stop
