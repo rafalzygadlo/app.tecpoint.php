@@ -1,0 +1,10 @@
+cd www/html
+rm -rf *
+rm -rf .*
+
+docker exec app.tecpoint.php composer create-project laravel/laravel .
+docker exec app.tecpoint.php composer require livewire/livewire
+
+#docker exec app.tecpoint.php php artisan jetstream:install livewire --teams
+chmod 777 -R bootstrap/cache
+chmod 777 -R storage
