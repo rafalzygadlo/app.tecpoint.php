@@ -1,0 +1,1 @@
+# app.tecpoint.php
