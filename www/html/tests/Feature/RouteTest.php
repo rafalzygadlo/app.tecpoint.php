@@ -31,6 +31,8 @@ class RouteTest extends TestCase
             'ru/privacy.html',
             '/home',
             '/login',
+            '/user',
+
 
         ];
        

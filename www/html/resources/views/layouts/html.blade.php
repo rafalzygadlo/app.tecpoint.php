@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="pl">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -34,7 +32,6 @@
   @yield('content')
 
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
           &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved

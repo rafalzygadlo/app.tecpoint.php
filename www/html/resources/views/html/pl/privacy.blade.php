@@ -32,7 +32,17 @@
     <p>Jeżeli zapisałeś się na nasz Newsletter, lub w inny sposób wyraziłeś zgodę na jego otrzymywanie, będziesz od nas otrzymywać drogą emailową nasz Newsletter.</p>
     
     <h2>Wykorzystanie ciasteczek ("cookies")</h2>
-    <p>Nasza strona internetowa nie wykorzystuje ciasteczek.</p>
+    <h3>Czym są ciasteczka?</h3>
+    <p>Ciasteczka (Cookies) to pliki, w których znajdują się informacje na temat użytkownika. Mechanizm cookie został wprowadzony aby w protokole HTTP umożliwić odróżnienie odwiedzających użytkowników.</p>
+    <p>To właśnie dzięki nim m.in. zapamiętywane są nasze odwiedziny strony oraz nasze preferencje (np. język strony, produkty w sklepie internetowym czy nawet miejsce zamieszkania).</p>
+    <p>Właściciele serwisów internetowych poprzez ciasteczka są w stanie określić zainteresowania swoich użytkowników, tworzyć statystyki odwiedzalności stron oraz wyświetlać reklamy produktów które mogą być dla nas interesujące.</p>
+    <p>Krótko mówiąc to dzięki ciasteczkom strony internetowe oraz reklamy na nich umieszczone są przystosowane dla nas indywidualnie, dzięki czemu są dużo atrakcyjniejsze.</p>
+
+    <h3>Jak działają pliki cookies?</h3>
+    <p>Są one zapisywane na żądanie serwera lub skryptu po stronie przeglądarki użytkownika. Wbrew nazwie pojedyncze ciasteczko często nie jest zapisywane jako jeden plik na dysku (Internet Explorer przechowuje wszystkie ciasteczka z danej witryny w jednym pliku, zaś przeglądarki jak Firefox i Chrome przechowują ją w bazie danych SQLite).</p>
+    <p>Możemy podzielić je na pliki sesyjne (tymczasowe), stałe oraz pliki cookies podmiotów zewnętrznych. Pliki sesyjne są przechowywane do momentu wylogowania z serwisu lub wyłączenia przeglądarki, zaś te drugie przez pewien czas który jest określony w pliku cookie. Pliki cookies podmiotów zewnętrznych są to pliki które pochodzą min. z serwerów reklamowych, dostawców usług czy serwerów firm. To właśnie ten rodzaj jest wykorzystywany w reklamach.</p>
+    <p>Pliki cookies mogą być w każdej chwili usunięte przez użytkownika.
+    <p>W 2012 roku Unia Europejska nałożyła na właścicieli witryn obowiązek informowania o używanie ciasteczek na stronie (efektywnie regulacje weszły w życie 22 marca 2013 roku).</p>
     
     <h2>Zmiany naszej polityki prywatności.</h2>
     <p>Zastrzegamy sobie prawo zmiany powyższej polityki prywatności poprzez opublikowanie nowej polityki prywatności na tej stronie.</p>

@@ -17,8 +17,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/font/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/app.css') }}">
-    
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+        
     @livewireStyles
         
 </head>
