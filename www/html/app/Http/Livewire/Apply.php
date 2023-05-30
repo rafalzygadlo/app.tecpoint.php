@@ -1,37 +1,60 @@
 <?php
 
-namespace App\Http\Livewire\Auth;
+namespace App\Http\Livewire;
 
 use Livewire\Component;
-use Auth;
+use Illuminate\Support\Facades\App;
 
 
 class Apply extends Component
 {
 
+    public $first_name;
     
-    public function login()
+    public $last_name;
+    
+    public $birth_date;
+    
+    public $email;
+    
+    public $telephone;
+
+
+    protected $rules = [
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'birth_date' => 'required',
+        'email' => 'required|email'
+    ];
+
+    public function messages()
     {
-        
-        if(Auth::guard('user')->attempt(['email' => $this->email, 'password' => $this->password]))
-        {
-            return redirect()->intended('/profile');
-        }
-        
-        $this->addError('email','Email falsch oder passwort');
-        $this->addError('password','Password falsch');
-    
+        return [
+            'email.required' => __('apply.email.required'),
+            'first_name.required' => __('apply.first_name.required'),
+            'last_name.required' => __('apply.last_name.required'),
+            'email.required' => __('apply.email.required'),
+            'email.email' => __('apply.email.email')
+        ];
     }
 
-    public function logout()
+    public function updated($propertyName)
     {
-        Auth::guard('user')->logout();
-        return redirect()->route('login');
+        $this->validateOnly($propertyName);
+    }
+
+    
+    public function submit()
+    {
+        $this->validate();
+        
+
     }
 
     public function render()
     {
-        return view('livewire.apply')->layout('layouts.html');
+        App::setLocale('pl');
+        return view('livewire.apply')->layout('layouts.user');
     }
 
 }

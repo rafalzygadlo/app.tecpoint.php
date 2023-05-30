@@ -20,6 +20,8 @@ Route::view('/datenschutz.html','html/datenschutz');
 //pl
 Route::view('/pl/index.html','html/pl/index');
 Route::view('/pl/privacy.html','html/pl/privacy');
+Route::get('/aplikuj.html', App\Http\Livewire\Apply::class);
+
 //ro
 Route::view('/ro/index.html','html/ro/index');
 Route::view('/ro/privacy.html','html/ro/privacy');

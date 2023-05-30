@@ -1,7 +1,6 @@
 @extends('layouts.html')
 @section('content')
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+<header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo"><img src="../img/logo-small.png" alt=""></a>
       <h1 class="logo me-auto"><a href="index.html">Tec-Point<span>.</span></a></h1>
@@ -21,12 +20,10 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
         
-      </nav><!-- .navbar -->
-      
-      
+      </nav>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
@@ -34,7 +31,7 @@
         <div class="col-xl-6">
           <h1>Praca w Niemczech</h1>
           <h2>Praca na produkcji w największej w Europie firmie z branży spożywczej</h2>
-          <a href="/apply" class="btn-get-started scrollto">Aplikuj</a>
+          <a href="/aplikuj.html" class="btn-get-started scrollto">Aplikuj</a>
         </div>
       </div>
     </div>
