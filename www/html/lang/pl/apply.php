@@ -15,21 +15,24 @@ return [
 
     'title' => 'Aplikuj',
     'first_name' => 'Imie',
-    'first_name.required' => 'Pole Imię jest wymagane',
+    'first_name.required' => 'Pole (Imię) jest wymagane',
 
     'last_name' => 'Nazwisko',
-    'last_name.required' => 'Pole Nazwisko jest wymagane',
+    'last_name.required' => 'Pole (Nazwisko) jest wymagane',
+
     'birth_date' => 'Data urodzenia',
-    'birth_date.required' => 'Pole Data urodzenia jest wymagane',
+    'birth_date.required' => 'Pole (Data urodzenia) jest wymagane',
     
     'email' => 'Email',
-    'email.required' => 'Pole Email jest wymagane',
-    'email.email' => 'Email nie prawidłowy',
+    'email.required' => 'Pole (Email) jest wymagane',
+    'email.email' => '(Email) nie prawidłowy',
     
     'telephone' => 'Telefon',
     'send' => 'Wyślij',
-    'confirm1' => 'Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesów rekrutacyjnych.',
-    'confirm2' => 'Zgodę na przetwarzanie Twoich danych osobowych możesz wycofać w dowolnym momencie wysyłając oświadczenie w formie pisemnej lub elektronicznej na adres mailowy: '
+    'policy1' => 'Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesów rekrutacyjnych.',
+    'policy2' => 'Zgodę na przetwarzanie Twoich danych osobowych możesz wycofać w dowolnym momencie wysyłając oświadczenie w formie pisemnej lub elektronicznej na adres mailowy: ',
+    'policy.accepted' => 'Proszę zaakceptować zgodę',
 
+    'form.submited' => 'Dziękujemy za przesłanie formularza. Skontaktujemy się z Państwem w najbliższym czasie.'
 
 ];

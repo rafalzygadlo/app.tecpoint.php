@@ -31,7 +31,7 @@
         <div class="col-xl-6">
           <h1>Praca w Niemczech</h1>
           <h2>Praca na produkcji w największej w Europie firmie z branży spożywczej</h2>
-          <a href="/aplikuj.html" class="btn-get-started scrollto">Aplikuj</a>
+          <a href="/pl/apply.html" class="btn-get-started scrollto">Aplikuj</a>
         </div>
       </div>
     </div>
@@ -465,11 +465,13 @@
                 </ul>
          </div>
 
-         <div class="row">
+         <div id="cookie-banner" class="row">
           <div class="me-md-auto text-center text-md-start">    
-            <div class="alert alert-danger cookie-info" style="display: block;">
+            <div class="cookie-banner alert alert-danger" style="display: block;">
               <i class="glyphicon glyphicon-info-sign"></i>Strona używa ciasteczek <strong> cookies </strong>. Więcej informacji znajdziesz w <a href="privacy.html">polityce prywatności</a>
-              <span id="cookie-info-remove"><i class="glyphicon glyphicon-remove"></i></span>
+
+              <a href="#" class="btn btn-primary">Akceptuj</a>
+              <a href="#" class="btn btn-primary">Odrzuć</a>
             </div>
           </div>
         </div>

@@ -2,14 +2,13 @@
 
     <div class="row justify-content-center">
         <div class="col-md-10 col-sm-12">
-        @if ($errors->any())
-        <div class="text-danger">
-                @foreach ($errors->all() as $error)
-                    {{ $error }}<br>
-                @endforeach
-        </div>
-        @endif
-           <div wire:loading>loading...</div>
+            
+            @if(session()->has('success'))
+            <div class="alert alert-info">
+                {{ session()->get('success')}}
+            </div>
+            @endif
+            
             <div class="box">
             <h1 class="box-header">@lang('apply.title') </h1>
             <hr>
@@ -17,7 +16,7 @@
                     <form wire:submit.prevent="submit">
                         @csrf
                         <div class="row mb-3">
-                            <label class="col-sm-4 col-form-label">@lang('apply.first_name.name')</label>
+                            <label class="col-sm-4 col-form-label">@lang('apply.first_name')</label>
                             <div class="col-md-8">
                                 <input class="form-control form-control-lg @error('first_name') is-invalid @enderror" wire:model.defer="first_name">
                                 @error('first_name')
@@ -76,18 +75,26 @@
                             </div>
                         </div>
                         <hr>
+
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('apply.confirm1') }}
-                                        {{ __('apply.confirm2') }}<a href="mailto:info@tec-point.de">info@tec-point.de</a>
-                                    </label>
+                                    <label class="form-check-label" for="policy">
+                                        {{ __('apply.policy1') }}
+                                        {{ __('apply.policy2') }}<a href="mailto:info@tec-point.de">info@tec-point.de</a>
+                                    </label>    
+                                    <input class="form-check-input @error('policy') is-invalid @enderror" type="checkbox" wire:model.defer="policy">
+                                    @error('policy')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    
                                 </div>
                             </div>
                         </div>
                         <hr>
+                        
                         <div class="row">
                             <div class="d-md-flex justify-content-md-end">
                                 <button type="submit" class="btn btn-primary btn-lg">

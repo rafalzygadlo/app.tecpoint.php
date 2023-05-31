@@ -1819,3 +1819,12 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+}

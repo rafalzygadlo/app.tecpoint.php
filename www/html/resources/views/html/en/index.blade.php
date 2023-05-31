@@ -36,7 +36,7 @@
         <div class="col-xl-6">
           <h1>Job in Germany</h1>
           <h2>Work on production in the largest food company in Europe</h2>
-          <a href="http://site.tec-point.de/pl/index.html#tabs" class="btn-get-started scrollto">We take off</a>
+          <a href="/en/apply.html" class="btn-get-started scrollto">Apply</a>
         </div>
       </div>
     </div>
@@ -462,11 +462,18 @@
           </div>
 
         </div>
-        <div class="row">
-          <div class="me-md-auto text-center text-md-start">    
-            <div class="alert alert-danger cookie-info" style="display: block;">
+
+        <div class="cookie-consent-banner alert1 alert-danger cookie-info" style="display: block;">
               <i class="glyphicon glyphicon-info-sign"></i>This site use <strong> cookies </strong>. More information can be found in the <a href="privacy.html">privacy policy</a>
               <span id="cookie-info-remove"><i class="glyphicon glyphicon-remove"></i></span>
+            </div>
+
+        <div class="row">
+          <div class="me-md-auto text-center text-md-start">
+            <div class="cookie-consent-banner alert1 alert-danger cookie-info" style="display: block;">
+              <i class="glyphicon glyphicon-info-sign"></i>This site use <strong> cookies </strong>. More information can be found in the <a href="privacy.html">privacy policy</a>
+              <a href="#" class="btn btn-primary">Akceptuj</a>
+              <a href="/en/apply.html" class="btn-get-started scrollto">Apply</a>
             </div>
           </div>
         </div>

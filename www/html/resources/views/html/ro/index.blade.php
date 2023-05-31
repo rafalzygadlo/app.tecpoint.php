@@ -36,7 +36,7 @@
         <div class="col-xl-6">
           <h1>Un loc de muncă în Germania</h1>
           <h2>Lucrați la producție în cea mai mare companie alimentară din Europa</h2>
-          <a href="#tabs" class="btn-get-started scrollto">Informație</a>
+          <a href="/ro/apply.html" class="btn-get-started scrollto">Informație</a>
         </div>
       </div>
     </div>

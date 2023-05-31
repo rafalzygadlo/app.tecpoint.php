@@ -22,6 +22,7 @@ class Employee extends Model
         'last_name',
         'birth_date',
         'begin_date',
+        'email',
         'status'
     ];
 }

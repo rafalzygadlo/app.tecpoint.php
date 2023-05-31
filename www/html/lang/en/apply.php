@@ -14,14 +14,24 @@ return [
     */
 
     'title' => 'Apply',
-    'first_name' =>['name' =>'First name','required' => 'filed is required'],
-    'last_name' => 'Last name',
-    'birth_date' => 'Birth date',
+
+    'first_name' => 'First Name',
+    'first_name.required' => 'Field (First Name) is required',
+
+    'last_name' => 'Last Name',
+    'last_name.required' => 'Field (Last Name) is required',
+
+    'birth_date' => 'Birth Date',
+    'birth_date.required' => 'Field (Birth Date) is required',
+
     'email' => 'Email',
+    'email.required' => 'Field (Email) is required',
+    'email.email' => '(Email) not valid',
+    
     'telephone' => 'Telephone',
     'send' => 'Send',
-    'confirm1' => 'Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesów rekrutacyjnych.',
-    'confirm2' => 'Zgodę na przetwarzanie Twoich danych osobowych możesz wycofać w dowolnym momencie wysyłając oświadczenie w formie pisemnej lub elektronicznej na adres mailowy: '
+    'policy1' => 'I consent to the processing of my personal data for the purposes of recruitment processes.',
+    'policy2' => 'You can withdraw your consent to the processing of your personal data at any time by sending a written or electronic statement to the e-mail address: '
 
 
 ];

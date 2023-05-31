@@ -71,6 +71,7 @@ class EmployeeTable extends DataTableComponent
     {
     
         return [
+            Column::make('id'),
             Column::make('avatar')
                 ->label(fn($row) => mb_substr($row->first_name, 0, 1) . mb_substr($row->last_name, 0, 1) ),
             Column::make('employees_id')
@@ -122,21 +123,29 @@ class EmployeeTable extends DataTableComponent
     public function bulkActions(): array
     {
         return [
+            'delete' => 'Delete',
             'activate' => 'Activate',
-            'deactivate' => 'Deactivate',
+            'deactivate' => 'Deactivate'
         ];
     }
 
+    public function delete()
+    {
+        Employee::whereIn('id', $this->getSelected())->delete();
+
+        $this->clearSelected();
+    }
+    
     public function activate()
     {
-        User::whereIn('id', $this->getSelected())->update(['active' => true]);
+        Employee::whereIn('id', $this->getSelected())->update(['status' => true]);
 
         $this->clearSelected();
     }
 
     public function deactivate()
     {
-        User::whereIn('id', $this->getSelected())->update(['active' => false]);
+        Employee::whereIn('id', $this->getSelected())->update(['status' => false]);
 
         $this->clearSelected();
     }
