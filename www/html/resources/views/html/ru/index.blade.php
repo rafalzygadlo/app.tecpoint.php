@@ -424,7 +424,7 @@
 
       </div>
     </div>
-  </section><!-- End Contact Section -->
+  </section>
 
   </main>
   <!-- End #main -->
@@ -464,19 +464,19 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Info</h4>
                 <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="../datenschutz.html">Datenschutz</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="../datenschutz.html">Impressum</a></li>
-                  </ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="../datenschutz.html">Datenschutz</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="../datenschutz.html">Impressum</a></li>
+                </ul>
             </div>
-          
-            <div class="row">
-            <div class="me-md-auto text-center text-md-start">    
-              <div class="alert alert-danger cookie-info" style="display: block;">
-                <i class="glyphicon glyphicon-info-sign"></i>Strona używa ciasteczek <strong> cookies </strong>. Więcej informacji znajdziesz w <a href="privacy.html">polityce prywatności</a>
-                <span id="cookie-info-remove"><i class="glyphicon glyphicon-remove"></i></span>
+        
+            <div id="cookies" class="row d-none">
+              <div class="me-md-auto text-center text-md-start">
+                <div class="cookie-banner alert alert-danger" style="display: block;">
+                  <i class="glyphicon glyphicon-info-sign"></i>This site use <strong> cookies </strong>. More information can be found in the <a href="privacy.html">privacy policy</a>
+                  <button class="btn btn-primary" onClick="closeCookies()">Accept</button>
+                </div>
               </div>
             </div>
-          </div>
 
           </div>
         </div>

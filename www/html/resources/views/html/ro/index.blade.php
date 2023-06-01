@@ -467,14 +467,14 @@
                 </ul>
           </div>
 
-          <div class="row">
-            <div class="me-md-auto text-center text-md-start">    
-              <div class="alert alert-danger cookie-info" style="display: block;">
-                <i class="glyphicon glyphicon-info-sign"></i>Strona używa ciasteczek <strong> cookies </strong>. Więcej informacji znajdziesz w <a href="privacy.html">polityce prywatności</a>
-                <span id="cookie-info-remove"><i class="glyphicon glyphicon-remove"></i></span>
-              </div>
+          <div id="cookies" class="row d-none">
+          <div class="me-md-auto text-center text-md-start">    
+            <div class="cookie-banner alert alert-danger" style="display: block;">
+              <i class="glyphicon glyphicon-info-sign"></i>Strona używa ciasteczek <strong> cookies </strong>. Więcej informacji znajdziesz w <a href="privacy.html">polityce prywatności</a>
+              <button class="btn btn-primary" onClick="closeCookies()">Akceptuj</button>
             </div>
           </div>
+        </div>
         
         </div>
         </div>

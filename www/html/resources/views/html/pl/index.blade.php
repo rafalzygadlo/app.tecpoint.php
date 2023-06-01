@@ -465,13 +465,11 @@
                 </ul>
          </div>
 
-         <div id="cookie-banner" class="row">
+         <div id="cookies" class="row d-none">
           <div class="me-md-auto text-center text-md-start">    
             <div class="cookie-banner alert alert-danger" style="display: block;">
               <i class="glyphicon glyphicon-info-sign"></i>Strona używa ciasteczek <strong> cookies </strong>. Więcej informacji znajdziesz w <a href="privacy.html">polityce prywatności</a>
-
-              <a href="#" class="btn btn-primary">Akceptuj</a>
-              <a href="#" class="btn btn-primary">Odrzuć</a>
+              <button class="btn btn-primary" onClick="closeCookies()">Akceptuj</button>
             </div>
           </div>
         </div>

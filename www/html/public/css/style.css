@@ -1828,3 +1828,7 @@ section {
   box-sizing: border-box;
   width: 100%;
 }
+
+.d-none{
+  display:none;
+}
