@@ -23,6 +23,11 @@
                         <hr>
                         @include('livewire.employee.personal.idcard')
                         <hr>
+                        <h2>Employment</h2>
+                        @include('livewire.employee.personal.employment')
+                        @include('livewire.employee.personal.employment')
+                        @include('livewire.employee.personal.employment')
+                        @include('livewire.employee.personal.employment')
                         @include('livewire.employee.personal.employment')
                         <hr>
 
@@ -31,7 +36,7 @@
                         <div class="col-md-6">
                             <!-- photo 1 -->
                             @if ($this->photo1) 
-                                <img src="{{ $this->photo1->temporaryUrl() }}">                        
+                                <img width='400px' height='300px' src="{{ $this->photo1->temporaryUrl() }}">                        
                             @endif    
                             <div x-data="{ isUploading: false, progress: 0 }"
                                  x-on:livewire-upload-start="isUploading = true"

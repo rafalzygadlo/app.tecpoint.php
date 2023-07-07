@@ -43,7 +43,7 @@ class Personal extends Component
 
     public $policy;
 
-    public Collection $inputs;
+    public $inputs;
 
 
 
