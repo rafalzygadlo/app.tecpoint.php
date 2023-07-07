@@ -20,8 +20,18 @@ return new class extends Migration
             $table->string('hr')->nullable();
             $table->string('first_name');
             $table->string('last_name')->nullable();
-            $table->string('email')->nullable();
             $table->date('birth_date')->nullable();
+            $table->string('place_of_birth')->nullable();
+            $table->integer('pesel')->nullable();
+            $table->string('marital_status');
+            $table->interer('citizenship');
+
+            $table->string('telephone')->nullable();
+            $table->string('email')->nullable();
+              
+            
+            
+            
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->default("45cm1jrmc429m0r9");
             $table->binary('img')->nullable();
