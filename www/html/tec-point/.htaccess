@@ -1,7 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{SERVER_PORT} !^443$
-RewriteRule (.*) https://tec-point.de/$1 [R=301,L]
-
-
-

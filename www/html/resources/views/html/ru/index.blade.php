@@ -34,7 +34,7 @@
         <div class="col-xl-6">
           <h1>Работа в Германии</h1>
           <h2>Работа на производстве в крупнейшей пищевой компании Европы</h2>
-          <a href="#tabs" class="btn-get-started scrollto">Информация</a>
+          <a href="apply" class="btn-get-started scrollto">Информация</a>
         </div>
       </div>
     </div>

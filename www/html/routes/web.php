@@ -20,7 +20,6 @@ Route::view('/datenschutz.html','html/datenschutz');
 //pl
 Route::view('/pl/index.html','html/pl/index');
 Route::view('/pl/privacy.html','html/pl/privacy');
-
 //ro
 Route::view('/ro/index.html','html/ro/index');
 Route::view('/ro/privacy.html','html/ro/privacy');
@@ -32,8 +31,8 @@ Route::view('/en/index.html','html/en/index');
 Route::view('/en/privacy.html','html/en/privacy');
 
 
-Route::get('/{lang}/apply.html', App\Http\Livewire\Apply::class); 
-Route::get('/{lang}/personal.html', App\Http\Livewire\Personal::class);
+Route::get('/{lang}/apply', App\Http\Livewire\Apply::class); 
+Route::get('/{lang}/personal', App\Http\Livewire\Personal::class);
 
 // user routes
 Route::get('/login',App\Http\Livewire\Auth\Login::class)->name('login');

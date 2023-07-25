@@ -13,12 +13,12 @@
             <h1 class="box-header">@lang('apply.title') </h1>
             <hr>
                 <div class="card-body">
-                    <form wire:submit.prevent="submit">
+                    <form action="post" wire:submit.prevent="submit">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.first_name')</label>
                             <div class="col-md-8">
-                                <input class="form-control form-control-lg @error('first_name') is-invalid @enderror" wire:model.defer="first_name">
+                                <input class="form-control @error('first_name') is-invalid @enderror" wire:model.defer="first_name">
                                 @error('first_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.last_name')</label>
                             <div class="col-md-8">
-                                <input class="form-control form-control-lg @error('last_name') is-invalid @enderror" wire:model.defer="last_name">
+                                <input class="form-control @error('last_name') is-invalid @enderror" wire:model.defer="last_name">
                                 @error('last_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -40,21 +40,9 @@
                         </div>
                         
                         <div class="row mb-3">
-                            <label class="col-sm-4 col-form-label">@lang('apply.birth_date')</label>
-                            <div class="col-md-8">
-                                <input type="date" class="form-control form-control-lg @error('birth_date') is-invalid @enderror" wire:model.defer="birth_date">
-                                @error('birth_date')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.email')</label>
                             <div class="col-md-8">
-                                <input type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" wire:model.defer="email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.defer="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -66,7 +54,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">@lang('apply.telephone')</label>
                             <div class="col-md-8">    
-                                <input type="tel" class="form-control form-control-lg @error('telephone') is-invalid @enderror" wire:model.defer="telephone">
+                                <input type="tel" class="form-control @error('telephone') is-invalid @enderror" wire:model.defer="telephone">
                                 @error('telephone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

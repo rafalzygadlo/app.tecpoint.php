@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\App;
-use App\Models\Employee;
+use App\Models\User;
 
 
 class Apply extends Component
@@ -26,8 +26,8 @@ class Apply extends Component
     protected $rules = [
         'first_name' => 'required',
         'last_name' => 'required',
-        'birth_date' => 'required|date',
-        'email' => 'required|email',
+        //'birth_date' => 'required|date',
+        'email' => 'required|email|unique:users',
         'policy' => 'accepted'
     ];
 
@@ -43,27 +43,27 @@ class Apply extends Component
             'email.required' => __('apply.email.required'),
             'first_name.required' => __('apply.first_name.required'),
             'last_name.required' => __('apply.last_name.required'),
-            'birth_date.required' => __('apply.birth_date.required'),
+            //'birth_date.required' => __('apply.birth_date.required'),
             'email.required' => __('apply.email.required'),
             'email.email' => __('apply.email.email'),
+	    'email.unique' => __('apply.email.unique'),
             'policy.accepted' => __('apply.policy.accepted')
         ];
     }
 
-    
     public function submit()
     {
         $validatedData = $this->validate();
-        Employee::Create($validatedData);
+        User::Create($validatedData);
 
         session()->flash('success',__('apply.form.submited'));
-        
+
         $this->reset();
 
     }
 
     public function render()
-    {   
+    {
         return view('livewire.apply')->layout('layouts.user');
     }
 

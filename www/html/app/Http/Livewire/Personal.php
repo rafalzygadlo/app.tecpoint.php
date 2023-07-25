@@ -97,7 +97,7 @@ class Personal extends Component
 
     public function render()
     {   
-        return view('livewire.employee.personal.index')->layout('layouts.user');
+        return view('livewire.personal.index')->layout('layouts.user');
     }
 
 }

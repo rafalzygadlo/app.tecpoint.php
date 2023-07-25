@@ -31,7 +31,7 @@
         <div class="col-xl-6">
           <h1>Praca w Niemczech</h1>
           <h2>Praca na produkcji w największej w Europie firmie z branży spożywczej</h2>
-          <a href="/pl/apply.html" class="btn-get-started scrollto">Aplikuj</a>
+          <a href="apply" class="btn-get-started scrollto">Aplikuj</a>
         </div>
       </div>
     </div>

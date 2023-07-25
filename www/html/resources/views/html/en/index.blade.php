@@ -36,7 +36,7 @@
         <div class="col-xl-6">
           <h1>Job in Germany</h1>
           <h2>Work on production in the largest food company in Europe</h2>
-          <a href="/en/apply.html" class="btn-get-started scrollto">Apply</a>
+          <a href="apply" class="btn-get-started scrollto">Apply</a>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" >
-    
+
     <script src="{{ asset('/js/bootstrap.bundle.js') }}"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -47,7 +47,7 @@
                         <!-- Authentication Links -->
                         @if(!Auth::guard('user')->check())
                             
-                            @if (Route::has('login'))
+                            @if (Route::has('login1'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
@@ -60,9 +60,7 @@
                             @endif
                         @else
                         <li class="nav-item">
-                        
                                 <a class="nav-link" href="{{ route('home.index') }}"><i class="bi bi-house-door-fill"></i></a>
-                                
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

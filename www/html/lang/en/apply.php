@@ -27,6 +27,7 @@ return [
     'email' => 'Email',
     'email.required' => 'Field (Email) is required',
     'email.email' => '(Email) not valid',
+    'email.unique' => '(Email) not unique',
     
     'telephone' => 'Telephone',
     'send' => 'Send',

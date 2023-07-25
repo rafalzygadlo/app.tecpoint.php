@@ -26,6 +26,7 @@ return [
     'email' => 'Email',
     'email.required' => 'Pole (Email) jest wymagane',
     'email.email' => '(Email) nie prawidłowy',
+    'email.unique' => '(Email) już istnieje (może już aplikowałeś ?)',
     
     'telephone' => 'Telefon',
     'send' => 'Wyślij',

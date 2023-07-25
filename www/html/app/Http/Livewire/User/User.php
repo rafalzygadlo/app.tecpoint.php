@@ -23,7 +23,7 @@ class User extends Component
         //$users = \App\Models\User::orderBy($this->sortColumnName,$this->sortDirection)->paginate(50);
         //$count = \App\Models\User::count();
         
-        return view('livewire.user.index', compact(['users','count']))->layout('layouts.user');
+        return view('livewire.user.index')->layout('layouts.user');
     }
 
 }

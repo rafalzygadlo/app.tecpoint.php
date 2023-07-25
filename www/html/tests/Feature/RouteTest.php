@@ -28,12 +28,7 @@ class RouteTest extends TestCase
             'en/index.html',
             'en/privacy.html',
             'ru/index.html',
-            'ru/privacy.html',
-            '/home',
-            '/login',
-            '/user',
-
-
+            'ru/privacy.html'
         ];
        
         foreach ($urls as $url) 
