@@ -13,6 +13,7 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Hash;
+use Filament\Tables\Filters\SelectFilter;
 
 class UserResource extends Resource
 {
@@ -25,7 +26,7 @@ class UserResource extends Resource
 
     public function getUserName()
     {
-	return 'test'; 
+	    return 'test'; 
     }
 
     public static function form(Form $form): Form
@@ -48,16 +49,16 @@ class UserResource extends Resource
                 ->dehydrated(fn ($state) => filled($state))
                 ->required(fn (string $context): bool => $context === 'create'),
 
-            Forms\Components\Select::make('role_id')
-                ->relationship('role', 'name')
-                ->searchable(),
+            //Forms\Components\Select::make('role_id')
+              //  ->relationship('role', 'name')
+              //  ->searchable(),
                 //->hiddenOn(ProductsRelationManager::class),
 
             Forms\Components\MarkdownEditor::make('bio')
                 ->columnSpan('full'),
 
-            Forms\Components\TextInput::make('github_handle')
-                ->label('GitHub'),
+            Forms\Components\TextInput::make('birth_date'),
+                
 
             Forms\Components\TextInput::make('twitter_handle')
                 ->label('Twitter'),
@@ -94,23 +95,47 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('hr')
+                ->searchable()
+                ->sortable(),   
                 Tables\Columns\TextColumn::make('first_name')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('last_name')
+		        Tables\Columns\TextColumn::make('last_name')
                     ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('birth_date')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('first_work_day')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable()
-                    ->sortable()
+                    ->sortable(),
+                Tables\Columns\BooleanColumn::make('status')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at'),
+                Tables\Columns\TextColumn::make('updated_at'),
             ])
-
             ->filters([
-                //
+                
+        
+                SelectFilter::make('status')
+                    ->options([
+                        '1' => 'Active',
+                        '0' => 'Inactive'
+                     ])
+                    ->attribute('status'),
+                   
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                //Tables\Actions\EditAction::make(),
+                //Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -133,8 +158,8 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            'create' => Pages\CreateUser::route('/create'),
-            'edit' => Pages\EditUser::route('/{record}/edit'),
+            //'create' => Pages\CreateUser::route('/create'),
+            //'view' => Pages\ViewUser::route('/{record}/view'),
         ];
     }    
 }

@@ -22,11 +22,16 @@ class User extends Authenticatable implements FilamentUser
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
+        'hr',
         'first_name',
         'last_name',
+        'birth_date',
         'email',
         'password',
+	'first_work_day',
+        'status'
     ];
 
     /**
@@ -49,8 +54,10 @@ class User extends Authenticatable implements FilamentUser
         return true;
     }
 
+    /*
     public function role(): BelongsTo
     {
         return $this->BelongsTo(Role::class);
     }
+    */
 }
