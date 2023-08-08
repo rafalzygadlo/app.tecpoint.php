@@ -35,6 +35,10 @@ class ImportUserMapping
         {
             $first_work_day = null;
         }
+        else
+        {
+            $first_work_day = date("Y-m-d", strtotime($first_work_day));
+        }
         
         $new_record = array
         (
