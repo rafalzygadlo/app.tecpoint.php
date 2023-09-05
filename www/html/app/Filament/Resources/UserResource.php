@@ -19,16 +19,10 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    //protected static ?string $navigationGroup = 'Task';
+    protected static ?string $navigationGroup = 'System';
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
     
-
-    public function getUserName()
-    {
-	    return 'test'; 
-    }
-
     public static function form(Form $form): Form
     {
         return $form
@@ -42,7 +36,7 @@ class UserResource extends Resource
             Forms\Components\TextInput::make('email')
                 ->required()
                 ->email()
-                ->unique(User::class, 'email', ignoreRecord: true),
+                ->unique(User::class, 'email'),
             Forms\Components\TextInput::make('password')
                 ->password()
                 ->dehydrateStateUsing(fn ($state) => Hash::make($state))
@@ -56,10 +50,11 @@ class UserResource extends Resource
 
             Forms\Components\MarkdownEditor::make('bio')
                 ->columnSpan('full'),
-
+            Forms\Components\FileUpload::make('avatar')
+                ->image()       
+                ->disk('public')
+                ->directory('avatar'),
             Forms\Components\TextInput::make('birth_date'),
-                
-
             Forms\Components\TextInput::make('twitter_handle')
                 ->label('Twitter'),
                 
@@ -95,6 +90,7 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('avatar'),
                 Tables\Columns\TextColumn::make('id')
                     ->sortable()
                     ->searchable(),
@@ -133,8 +129,8 @@ class UserResource extends Resource
                    
             ])
             ->actions([
-                //Tables\Actions\EditAction::make(),
-                //Tables\Actions\DeleteAction::make(),
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
@@ -158,8 +154,6 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            //'create' => Pages\CreateUser::route('/create'),
-            //'view' => Pages\ViewUser::route('/{record}/view'),
         ];
     }    
 }

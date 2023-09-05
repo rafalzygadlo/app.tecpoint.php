@@ -42,6 +42,7 @@ class ImportUserMapping
         
         $new_record = array
         (
+            "avatar" => "avatar/".$record[0].".png",
             "id" => $record[0],
             "hr" => $record[hr],
             "first_name" => $record[first_name],

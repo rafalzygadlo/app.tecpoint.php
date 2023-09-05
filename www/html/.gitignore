@@ -1,8 +1,9 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage
+/public/storage/avatar
 /storage/*.key
+/storage/app/public/avatar
 /vendor
 .env
 .env.backup
