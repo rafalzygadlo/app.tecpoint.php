@@ -1,5 +1,6 @@
-<h4>Personal data</h4>
+<h4>@lang('apply.personal_data')</h4>
     <div class="row">
+        
         <div class="col-md-6">
             <label class="form-label">@lang('apply.first_name')</label>
             <input class="form-control @error('first_name') is-invalid @enderror" wire:model.defer="first_name">
@@ -9,6 +10,7 @@
             </span>
             @enderror
         </div>
+
         <div class="col-md-6">
             <label class="form-label">@lang('apply.last_name')</label>
             <input class="form-control @error('last_name') is-invalid @enderror" wire:model.defer="last_name">
@@ -44,7 +46,7 @@
 
     <div class="row g-3">
         <div class="col-md-6">    
-            <label class="form-label">@lang('personal.pesel')</label>
+            <label class="form-label">@lang('apply.pesel')</label>
             <input class="form-control @error('pesel') is-invalid @enderror" wire:model.defer="pesel">
             @error('pesel')
             <span class="invalid-feedback" role="alert">
@@ -66,7 +68,7 @@
 
     <div class="row g-3">
         <div class="col-md-6">    
-            <label class="form-label">@lang('personal.citizenship')</label>
+            <label class="form-label">@lang('apply.citizenship')</label>
             <input class="form-control @error('citizenship') is-invalid @enderror" wire:model.defer="citizenship">
             @error('citizenship')
             <span class="invalid-feedback" role="alert">

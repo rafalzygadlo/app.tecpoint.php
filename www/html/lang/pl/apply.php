@@ -13,22 +13,36 @@ return [
     |
     */
 
+    
     'title' => 'Aplikuj',
+    //personal
+    'personal_data' => 'Dane osobowe',
     'first_name' => 'Imie',
     'first_name.required' => 'Pole (Imię) jest wymagane',
-
     'last_name' => 'Nazwisko',
     'last_name.required' => 'Pole (Nazwisko) jest wymagane',
-
     'birth_date' => 'Data urodzenia',
     'birth_date.required' => 'Pole (Data urodzenia) jest wymagane',
+    'place_of_birth' => 'Miejsce urodzenia',
+    'pesel' => 'PESEL',
+    'marital_status' => 'Stan cywilny',
+    'citizenship' => 'Obywatelstwo',
+    'confession' => 'Wyznanie',
     
+    //contact
+    'contact' => 'Dane kontaktowe',
     'email' => 'Email',
-    'email.required' => 'Pole (Email) jest wymagane',
     'email.email' => '(Email) nie prawidłowy',
     'email.unique' => '(Email) już istnieje (może już aplikowałeś ?)',
-    
     'telephone' => 'Telefon',
+    
+    //address
+    'address' => 'Dane adresowe',
+    'street' => 'Ulica',
+    'number' => 'Numer',
+    'code' => 'Kod pocztowy',
+    'city' => 'Miasto',
+
     'send' => 'Wyślij',
     'policy1' => 'Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesów rekrutacyjnych.',
     'policy2' => 'Zgodę na przetwarzanie Twoich danych osobowych możesz wycofać w dowolnym momencie wysyłając oświadczenie w formie pisemnej lub elektronicznej na adres mailowy: ',

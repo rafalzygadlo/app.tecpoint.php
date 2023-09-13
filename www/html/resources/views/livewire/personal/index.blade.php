@@ -21,60 +21,8 @@
                         <hr>
                         @include('livewire.personal.address')
                         <hr>
-                        @include('livewire.personal.idcard')
+                        <!-- @include('livewire.personal.idcard') -->
                         <hr>
-                        <h4>Employment</h4>
-                        @include('livewire.personal.employment')
-                        @include('livewire.personal.employment')
-                        @include('livewire.personal.employment')
-                        @include('livewire.personal.employment')
-                        @include('livewire.personal.employment')
-                        <hr>
-
-                        <h4>Photos</h4>
-                        <div class="row g-3">
-                        <div class="col-md-6">
-                            <!-- photo 1 -->
-                            @if ($this->photo1) 
-                                <img width='400px' height='300px' src="{{ $this->photo1->temporaryUrl() }}">                        
-                            @endif    
-                            <div x-data="{ isUploading: false, progress: 0 }"
-                                 x-on:livewire-upload-start="isUploading = true"
-                                x-on:livewire-upload-finish="isUploading = false"
-                                x-on:livewire-upload-error="isUploading = false"
-                                x-on:livewire-upload-progress="progress = $event.detail.progress">
-                            <!-- File Input -->
-                            <input type="file" wire:model="photo1">
- 
-                            <!-- Progress Bar -->
-                            <div x-show="isUploading">
-                                <progress max="100" x-bind:value="progress"></progress>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <!-- photo 1 -->
-                            @if ($this->photo2) 
-                                <img src="{{ $this->photo2->temporaryUrl() }}">                        
-                            @endif    
-                            <div x-data="{ isUploading: false, progress: 0 }"
-                                 x-on:livewire-upload-start="isUploading = true"
-                                x-on:livewire-upload-finish="isUploading = false"
-                                x-on:livewire-upload-error="isUploading = false"
-                                x-on:livewire-upload-progress="progress = $event.detail.progress">
-                            <!-- File Input -->
-                            <input type="file" wire:model="photo2">
- 
-                            <!-- Progress Bar -->
-                            <div x-show="isUploading">
-                                <progress max="100" x-bind:value="progress"></progress>
-                            </div>
-                        </div>
-                        </div>
-
-                        <div>
-
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="form-check">

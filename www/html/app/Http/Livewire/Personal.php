@@ -52,9 +52,12 @@ class Personal extends Component
         'first_name'    => 'required',
         'last_name'     => 'required',
         'birth_date'    => 'required|date',
-        'email'         => 'required|email',
+        //'email'         => 'required|email',
+        'code'          => 'required',
+
         'city'          => 'required',
         'number'        => 'required',
+        'street'        => 'required',
         'policy'        => 'accepted'
     ];
 
@@ -63,20 +66,6 @@ class Personal extends Component
         App::setLocale($lang);
         $this->fill(['inputs' => collect([['email' => '']]),]);
 
-    }
-
-    public function messages()
-    {
-        return 
-        [
-            'email.required' => __('apply.email.required'),
-            'first_name.required' => __('apply.first_name.required'),
-            'last_name.required' => __('apply.last_name.required'),
-            'birth_date.required' => __('apply.birth_date.required'),
-            'email.required' => __('apply.email.required'),
-            'email.email' => __('apply.email.email'),
-            'policy.accepted' => __('apply.policy.accepted')
-        ];
     }
 
     public function addInput()

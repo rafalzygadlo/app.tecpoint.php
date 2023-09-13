@@ -1,8 +1,8 @@
-<h4>Address</h4>
+<h4>@lang('apply.address')</h4>
 <div class="row g-3">
     <div class="col-md-10">
         <label class="form-label">@lang('apply.street')</label>
-        <input class="form-control @error('email') is-invalid @enderror" wire:model.defer="street">
+        <input class="form-control @error('street') is-invalid @enderror" wire:model.defer="street">
         @error('street')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
@@ -12,7 +12,7 @@
          
     <div class="col-md-2">
         <label class="form-label">@lang('apply.number')</label>
-        <input class="form-control @error('email') is-invalid @enderror" wire:model.defer="number">
+        <input class="form-control @error('number') is-invalid @enderror" wire:model.defer="number">
         @error('number')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
@@ -24,7 +24,7 @@
 <div class="row g-3">    
     <div class="col-md-2">
         <label class="col-form-label">@lang('apply.code')</label>
-        <input class="form-control @error('telephone') is-invalid @enderror" wire:model.defer="code">
+        <input class="form-control @error('code') is-invalid @enderror" wire:model.defer="code">
         @error('code')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
 
     <div class="col-md-10">
         <label class="col-form-label">@lang('apply.city')</label>
-        <input class="form-control @error('telephone') is-invalid @enderror" wire:model.defer="city">
+        <input class="form-control @error('city') is-invalid @enderror" wire:model.defer="city">
         @error('city')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>

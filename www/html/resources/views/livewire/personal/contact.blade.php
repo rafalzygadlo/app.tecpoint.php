@@ -1,5 +1,6 @@
-<h4>Contact data</h4>
+<h4>@lang('apply.contact')</h4>
 <div class="row g-3">
+    
     <div class="col-md-6">
         <label class="form-label">@lang('apply.email')</label>
         <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.defer="email">
@@ -19,4 +20,5 @@
         </span>
         @enderror
     </div>
+    
 </div>
