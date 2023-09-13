@@ -147,6 +147,7 @@ class UserResource extends Resource
     {
         return [
             RelationManagers\AddressesRelationManager::class,
+            RelationManagers\AddressesRelationManager::class
         ];
     }
     

@@ -19,18 +19,32 @@ class AddressesRelationManager extends RelationManager
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-            ]);
+        ->schema([
+            Forms\Components\TextInput::make('country')
+                ->required()
+                ->columnSpan('full'),                
+            Forms\Components\TextInput::make('code')
+                ->required(),
+            Forms\Components\TextInput::make('city')
+                ->columnSpan(3)
+                ->required(),
+            Forms\Components\TextInput::make('street')
+                ->columnSpan(3)
+                ->required(),
+            Forms\Components\TextInput::make('number')
+               ->required()
+            ])
+            ->columns(4);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('country'),
+                Tables\Columns\TextColumn::make('code'),
+                Tables\Columns\TextColumn::make('city'),
+                Tables\Columns\TextColumn::make('number')
             ])
             ->filters([
                 //

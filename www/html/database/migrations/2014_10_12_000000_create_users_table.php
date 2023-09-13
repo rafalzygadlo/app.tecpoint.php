@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('full_name')->virtualAs('concat(first_name, \' \', last_name)');
             $table->string('email')->unique()->nullable();
             $table->date('birth_date')->nullable();
             $table->string('place_of_birth')->nullable();
