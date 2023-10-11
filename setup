@@ -1,5 +1,5 @@
-//sudo docker exec app.tecpoint.php composer install
-//sudo docker exec app.tecpoint.php php artisan migrate:fresh --seed
+#sudo docker exec app.tecpoint.php composer install
+#sudo docker exec app.tecpoint.php php artisan migrate:fresh --seed
 
 sudo chown default:default -R ./
 sudo chmod 777 -R www/html/bootstrap/cache

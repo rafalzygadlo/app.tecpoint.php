@@ -1,0 +1,2 @@
+sudo docker exec app.tecpoint.php composer install
+sudo docker exec app.tecpoint.php php artisan migrate:fresh --seed

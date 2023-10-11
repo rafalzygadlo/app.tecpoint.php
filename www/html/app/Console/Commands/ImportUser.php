@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Lib\File\FileReader;
 use App\Models\User;
+use App\Models\Import;
 use App\Models\Mapping\ImportUserMapping;
 
 class ImportUser extends Command
@@ -35,23 +36,35 @@ class ImportUser extends Command
         $reader = new FileReader('_data/user.csv', 20,"\t");
         $mapping = new ImportUserMapping();
 
-        if($reader->Run())
-        {
-            foreach($reader->Records as $record)
-            {
-                $record = $mapping->get($record);
-		        print_r($record);
-                try
-                {
-                    $user = User::updateOrCreate(["id" => $record['id']], $record);
-                
-                } catch (\Exception $e){
-			        print $e->getMessage();
-                    \Log::error($e->getMessage());
-                }
-            }
+	    \Log::debug("Import User Start");
 
+        if(!$reader->Run())
+        {
+            \Log::error("Import User Error");
+            return;
         }
+
+        $progressbar = $this->output->createProgressBar(count($reader->Records));
+        $progressbar->start();
+        
+        foreach($reader->Records as $record)
+        {
+            $record = $mapping->get($record);
+            try
+            {
+                $user = User::updateOrCreate(["id" => $record['id']], $record);
+                $progressbar->advance();
+ 
+            } catch (\Exception $e){
+
+                \Log::error($e->getMessage());
+            }
+        }
+            
+        $progressbar->finish();
+
+        Import::create(['name' => 'users']);
+	    \Log::debug("Import User End");
         
     }
 }
