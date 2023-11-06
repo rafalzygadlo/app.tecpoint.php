@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -13,12 +14,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('imports', function (Blueprint $table) {
+        Schema::create('words', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
+            $table->string('name_pl');
+            $table->string('name_de');
+            $table->string('name_en');
             $table->timestamps();
-        });
 
+        });
     }
 
     /**
@@ -28,7 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('imports');
+        Schema::dropIfExists('employes');
     }
 };
