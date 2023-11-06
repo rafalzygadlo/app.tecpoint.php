@@ -35,9 +35,9 @@ Route::get('/{lang}/apply', App\Http\Livewire\Apply::class);
 Route::get('/{lang}/personal', App\Http\Livewire\Personal::class);
 
 // user routes
-Route::get('/login',App\Http\Livewire\Auth\Login::class)->name('login');
-Route::post('/login',[App\Http\Livewire\Auth\Login::class,'login'])->name('login');
-Route::get('/logout',[App\Http\Livewire\Auth\Login::class,'logout'])->name('logout');
+//Route::get('/login',App\Http\Livewire\Auth\Login::class)->name('login');
+//Route::post('/login',[App\Http\Livewire\Auth\Login::class,'login'])->name('login');
+//Route::get('/logout',[App\Http\Livewire\Auth\Login::class,'logout'])->name('logout');
 
 
 Route::group([

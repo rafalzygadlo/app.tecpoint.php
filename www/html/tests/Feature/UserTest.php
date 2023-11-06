@@ -13,7 +13,7 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_user_can_apply()
+    public function test_user_can_apply_form()
     {
         $response = $this->post('/pl/apply', [
             'first_name' => 'first name',

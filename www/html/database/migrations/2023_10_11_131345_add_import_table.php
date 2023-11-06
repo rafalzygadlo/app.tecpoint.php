@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        $table->integer('name')->nullable();
-        $table->timestamps();
+        Schema::create('imports', function (Blueprint $table) {
+            $table->string('name')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
