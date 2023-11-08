@@ -33,7 +33,10 @@ class ImportUser extends Command
      */
     public function handle()
     {
-        $reader = new FileReader('_data/users.csv', 20,"\t");
+	if(!file_exists('_data/users.csv'))
+		return;
+
+	$reader = new FileReader('_data/users.csv', 20,"\t");
         $mapping = new ImportUserMapping();
 
 	    \Log::debug("Import User Start");
@@ -63,8 +66,9 @@ class ImportUser extends Command
             
         $progressbar->finish();
 
-        Import::create(['name' => 'users']);
-	    \Log::debug("Import User End");
+	Import::create(['name' => 'users']);
+	unlink("_data/users.csv");
+	\Log::debug("Import User End");
         
     }
 }
