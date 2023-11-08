@@ -15,7 +15,7 @@ services:
       - tecpoint-dev
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./www/html:/var/www/html
+      - ./..:/var/www/html
     restart: unless-stopped
 
   php:
@@ -29,7 +29,7 @@ services:
     networks:
       - tecpoint-dev
     volumes:
-      - ./www/html:/var/www/html
+      - ./..:/var/www/html
     restart: unless-stopped
 
   mysql:
@@ -40,7 +40,7 @@ services:
       - "3306:3306"
     command: mysqld --default-authentication-plugin=mysql_native_password
     volumes:
-      - ./www/html:/var/www/html
+      - ./..:/var/www/html
     environment:
       - MYSQL_DATABASE=db
       - MYSQL_ROOT_PASSWORD=pwd

@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('import:user')->everyTenMinutes();
+        $schedule->exec('/usr/bin/php8.1 /kunden/homepages/3/d426936394/htdocs/tec-point/app.tec-point.de/artisan import:user')->hourly();
     }
 
     /**

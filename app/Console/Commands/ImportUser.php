@@ -33,7 +33,7 @@ class ImportUser extends Command
      */
     public function handle()
     {
-        $reader = new FileReader('_data/user.csv', 20,"\t");
+        $reader = new FileReader('_data/users.csv', 20,"\t");
         $mapping = new ImportUserMapping();
 
 	    \Log::debug("Import User Start");
