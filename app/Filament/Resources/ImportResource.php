@@ -31,13 +31,22 @@ class ImportResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),   
+                Tables\Columns\TextColumn::make('created_at'),
+
+                Tables\Columns\TextColumn::make('updated_at'),
                 //
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                //Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -55,8 +64,9 @@ class ImportResource extends Resource
     {
         return [
             'index' => Pages\ListImports::route('/'),
-            'create' => Pages\CreateImport::route('/create'),
-            'edit' => Pages\EditImport::route('/{record}/edit'),
+            //'create' => Pages\CreateImport::route('/create'),
+            //'edit' => Pages\EditImport::route('/{record}/edit'),
+            //'view' => Pages\ListImports::route('/view'),
         ];
     }    
 }
