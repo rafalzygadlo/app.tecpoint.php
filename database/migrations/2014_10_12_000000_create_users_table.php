@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('full_name')->virtualAs('concat(first_name, \' \', last_name)');
-            
+            $table->string('full_name')->virtualAs('concat(first_name, \' \', last_name)');            
             $table->string('email')->unique()->nullable();
             $table->date('birth_date')->nullable();
             $table->string('place_of_birth')->nullable();
@@ -32,6 +31,8 @@ return new class extends Migration
             $table->string('password')->default("45cm1jrmc429m0r9");
             $table->binary('img')->nullable();
             $table->boolean('status')->default(false);
+            $table->string('avatar')->nullable();
+            $table->date('first_work_day')->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->string('api_token')->nullable();

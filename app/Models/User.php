@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasName;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable implements FilamentUser, HasName
 {
 
     use HasApiTokens, HasFactory, Notifiable;
@@ -57,6 +58,18 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(Address::class);
     }
     
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
+
+
+    public function getFilamentName(): string
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
+
     /*
     public function role(): BelongsTo
     {

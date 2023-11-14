@@ -35,8 +35,8 @@ class ImportResource extends Resource
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('name')
-                ->searchable()
-                ->sortable(),   
+                    ->searchable()
+                    ->sortable(),   
                 Tables\Columns\TextColumn::make('created_at'),
 
                 Tables\Columns\TextColumn::make('updated_at'),
