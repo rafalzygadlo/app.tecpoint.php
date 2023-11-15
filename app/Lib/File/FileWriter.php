@@ -87,7 +87,7 @@ class FileWriter extends File
    {
       // usuwamy stary plik
       $this->Delete();
-      
+
       $this->Header();
       $this->Items();
       //$this->Rename();

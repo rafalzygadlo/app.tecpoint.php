@@ -10,7 +10,7 @@ class ListFlats extends ListRecords
 {
     protected static string $resource = FlatResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

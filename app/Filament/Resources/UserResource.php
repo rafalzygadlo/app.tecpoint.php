@@ -6,14 +6,16 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
-use Filament\Resources\Form;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Hash;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Forms\Components\FileUpload;
+ 
 
 class UserResource extends Resource
 {
@@ -51,7 +53,8 @@ class UserResource extends Resource
             Forms\Components\MarkdownEditor::make('bio')
                 ->columnSpan('full'),
             Forms\Components\FileUpload::make('avatar')
-                ->image()       
+                ->image()
+                ->imageEditor()       
                 ->disk('public')
                 ->directory('avatar'),
             Forms\Components\TextInput::make('birth_date'),

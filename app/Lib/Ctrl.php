@@ -292,9 +292,9 @@ abstract class Ctrl
 		$this->View->SetPage();
         Session::SetPage($value);
 		Session::SetPageTo($value);
-		
+
 		//set page to
-		
+
 		//$this->SetPageTo($value);
 		
 		

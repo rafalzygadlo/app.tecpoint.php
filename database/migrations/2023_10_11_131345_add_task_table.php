@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->integer('creator_id')->nullable();
             $table->string('title')->nullable();
             $table->text('info')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->integer('employee_id')->nullable(); // is the same user table
-            $table->integer('flat_id')->nullable();
+            $table->enum('status', ['new', 'processing', 'canceled', 'done'])->default('new');
+            //$table->
             $table->date('begin')->nullable();
             $table->date('end')->nullable();
             $table->timestamps();

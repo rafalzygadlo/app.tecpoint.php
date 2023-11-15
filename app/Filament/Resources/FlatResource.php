@@ -6,9 +6,9 @@ use App\Filament\Resources\FlatResource\Pages;
 use App\Filament\Resources\FlatResource\RelationManagers;
 use App\Models\Flat;
 use Filament\Forms;
-use Filament\Resources\Form;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -19,7 +19,7 @@ class FlatResource extends Resource
 
     protected static ?string $navigationGroup = 'System';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
     {
@@ -33,7 +33,7 @@ class FlatResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('city')
                     ->required()
-                
+
             ])
             ->columns(2);
                 //

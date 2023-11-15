@@ -115,7 +115,7 @@ class EmployeeTable extends DataTableComponent
     public function builder(): Builder
     {
         return Employee::query()
-            
+
             ->select(); // Select some things
     }
 

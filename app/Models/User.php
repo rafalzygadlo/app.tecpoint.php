@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Filament\Panel;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasName;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -48,7 +49,7 @@ class User extends Authenticatable implements FilamentUser, HasName
         'email_verified_at' => 'datetime',
     ];
 
-    public function canAccessFilament(): bool
+    public function canAccessPanel(Panel $panel): bool
     {
         return true;
     }
@@ -57,7 +58,7 @@ class User extends Authenticatable implements FilamentUser, HasName
     {
         return $this->hasMany(Address::class);
     }
-    
+
     public function tasks()
     {
         return $this->hasMany(Task::class);

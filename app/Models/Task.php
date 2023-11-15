@@ -15,15 +15,20 @@ class Task extends Model
     * @var array<int, string>
     */
     protected $fillable = [
-        'user_id',
-        'flat_id',
+        'creator_id',
         'title',
-        'info'
+        'info',
+        'status'
     ];
 
     public function user(): BelongsTo
     {
         return $this->BelongsTo(User::class);
+    }
+
+    public function creator(): BelongsTo
+    {
+        return $this->BelongsTo(User::class,'creator_id');
     }
 
     public function flat(): BelongsTo
