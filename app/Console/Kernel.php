@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->exec('/usr/bin/php8.1 /kunden/homepages/3/d426936394/htdocs/tec-point/app.tec-point.de/artisan import:user  >> /dev/null 2>&1')->dailyAt('00:05');
-        //$schedule->command('import:user')->dailyAt('00:05');
+        $schedule->exec('/usr/bin/php8.1 /kunden/homepages/3/d426936394/htdocs/tec-point/app.tec-point.de/artisan import:flat  >> /dev/null 2>&1')->dailyAt('00:06');
     }
 
     /**

@@ -25,8 +25,19 @@ class FlatResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('street')
+                    ->required(),
+                Forms\Components\TextInput::make('number')
+                    ->required(),
+                Forms\Components\TextInput::make('code')
+                    ->required(),
+                Forms\Components\TextInput::make('city')
+                    ->required()
+                
+            ])
+            ->columns(2);
                 //
-            ]);
+//            ]);
     }
 
     public static function table(Table $table): Table
@@ -70,7 +81,7 @@ class FlatResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\TasksRelationManager::class
         ];
     }
     
@@ -78,9 +89,7 @@ class FlatResource extends Resource
     {
         return [
             'index' => Pages\ListFlats::route('/'),
-            //'create' => Pages\CreateFlat::route('/create'),
-            //'edit' => Pages\EditFlat::route('/{record}/edit'),
-            //'view' => Pages\ViewFlat::route('/{record}/view'),
+            'edit' => Pages\EditFlat::route('/{record}/edit')
         ];
     }    
 }

@@ -68,7 +68,7 @@ class ImportFlat extends Command
         $progressbar->finish();
 
 	Import::create(['name' => 'flats']);
-	//unlink("_data/flats.csv");
+	unlink("_data/flats.csv");
 	\Log::debug("Import Flat End");
         
     }
