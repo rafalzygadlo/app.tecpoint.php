@@ -27,11 +27,8 @@ class TaskResource extends Resource
     {
         return $form
             ->schema([
-
-            //Forms\Components\Select::make('user_id')
-            //    ->relationship('user', 'full_name')
-            //    ->searchable()
-            //    ->columnSpan('full'),
+            Forms\Components\Group::make()
+                ->schema([
             Forms\Components\TextInput::make('title')
                 ->required()
                 ->columnSpan('full'),
@@ -45,14 +42,12 @@ class TaskResource extends Resource
                     'cancelled' => 'Cancelled',
                 ])
                 ->required(),
-                //->native(false),
+            Forms\Components\DatePicker::make('begin')
+                ->required(),
+            ])
+            ->columns(2)
+            ->columnSpan(['lg' => fn (?Task $record) => $record === null ? 3 : 2]),
 
-                //->native(false), 
-            //Forms\Components\Select::make('flat_id')
-            //    ->relationship('flat', 'full_name')
-            //    ->searchable()
-            //    ->columnSpan('full'),
-            
             Forms\Components\Card::make()
                 ->schema([
                     Forms\Components\Placeholder::make('created_at')
@@ -63,10 +58,13 @@ class TaskResource extends Resource
                         ->label('Last modified at')
                         ->content(fn (Task $record): ?string => $record->updated_at?->diffForHumans())
                     ])
-                    
+                    ->columnSpan(['lg' => 1])
                     ->hidden(fn (?Task $record) => $record === null),
             ])
-            ->columns(4);
+            ->columns([
+                'sm' => 3,
+                'lg' => null,
+            ]);
             
             
     }
@@ -90,6 +88,9 @@ class TaskResource extends Resource
             Tables\Columns\TextColumn::make('creator.full_name')
                 ->searchable()
                 ->sortable(),
+            Tables\Columns\TextColumn::make('begin')
+                ->searchable()
+                ->sortable(),    
             Tables\Columns\TextColumn::make('created_at')->since()
                 ->sortable(),
             Tables\Columns\TextColumn::make('updated_at')
@@ -111,7 +112,18 @@ class TaskResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ]);
+            ])
+            ->groups([
+                Tables\Grouping\Group::make('created_at')
+                    ->label('Order Date')
+                    ->date()
+                    ->collapsible(),
+                Tables\Grouping\Group::make('begin')
+                    ->label('Begin Date')
+                    ->date()
+                    ->collapsible()
+            ])
+            ;
     }
     
     public static function getRelations(): array
@@ -127,4 +139,9 @@ class TaskResource extends Resource
             'edit' => Pages\EditTask::route('/{record}/edit'),
         ];
     }    
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::where('status', 'new')->count();
+    }
 }

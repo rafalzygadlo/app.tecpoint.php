@@ -18,6 +18,7 @@ class Task extends Model
         'creator_id',
         'title',
         'info',
+        'begin',
         'status'
     ];
 
