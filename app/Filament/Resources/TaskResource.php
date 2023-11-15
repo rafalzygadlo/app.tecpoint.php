@@ -44,6 +44,12 @@ class TaskResource extends Resource
                 ->required(),
             Forms\Components\DatePicker::make('begin')
                 ->required(),
+            Forms\Components\FileUpload::make('attachments')
+                ->image()
+                ->imageEditor()
+                ->multiple()
+                ->disk('public')
+                ->directory('task'),
             ])
             ->columns(2)
             ->columnSpan(['lg' => fn (?Task $record) => $record === null ? 3 : 2]),
@@ -84,13 +90,16 @@ class TaskResource extends Resource
                     'success' => 'done',
                 ]),
 
-                
+            Tables\Columns\ImageColumn::make('attachments')
+                ->searchable()
+                ->sortable(),    
             Tables\Columns\TextColumn::make('creator.full_name')
                 ->searchable()
                 ->sortable(),
             Tables\Columns\TextColumn::make('begin')
                 ->searchable()
-                ->sortable(),    
+                ->sortable(),
+                    
             Tables\Columns\TextColumn::make('created_at')->since()
                 ->sortable(),
             Tables\Columns\TextColumn::make('updated_at')

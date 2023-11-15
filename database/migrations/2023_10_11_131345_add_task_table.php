@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('info')->nullable();
             $table->enum('status', ['new', 'processing', 'canceled', 'done'])->default('new');
-            //$table->
+            $table->string('attachments')->nullable();
             $table->date('begin')->nullable();
             $table->date('end')->nullable();
             $table->timestamps();
