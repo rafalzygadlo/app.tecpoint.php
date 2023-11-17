@@ -49,7 +49,8 @@ class TaskResource extends Resource
                 ->imageEditor()
                 ->multiple()
                 ->disk('public')
-                ->directory('task'),
+                ->directory('task')
+                ->columnSpan('full'),
             ])
             ->columns(2)
             ->columnSpan(['lg' => fn (?Task $record) => $record === null ? 3 : 2]),

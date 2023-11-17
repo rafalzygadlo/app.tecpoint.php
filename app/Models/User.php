@@ -10,8 +10,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Collection;
+use Filament\Models\Contracts\HasTenants;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable implements FilamentUser, HasName
+class User extends Authenticatable implements FilamentUser, HasName, HasTenants
 {
 
     use HasApiTokens, HasFactory, Notifiable;
@@ -64,11 +68,28 @@ class User extends Authenticatable implements FilamentUser, HasName
         return $this->hasMany(Task::class);
     }
 
+    //tenants
+    public function getTenants(Panel $panel): Collection
+    {
+        return $this->teams;
+    }
+    
+    public function teams(): BelongsToMany
+    {
+        return $this->belongsToMany(Team::class);
+    }
+ 
+    public function canAccessTenant(Model $tenant): bool
+    {
+        return $this->teams->contains($tenant);
+    }
+
 
     public function getFilamentName(): string
     {
         return "{$this->first_name} {$this->last_name}";
     }
+
 
 
     /*

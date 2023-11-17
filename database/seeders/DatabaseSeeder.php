@@ -16,11 +16,24 @@ class DatabaseSeeder extends Seeder
     {
     
          \App\Models\User::factory()->create([
-	    'name' => 'demo',	
+	        'name' => 'demo',	
             'first_name' => 'demo',
             'last_name' => 'demo',
             'email' => 'demo@demo.com',
             'password' => bcrypt('demo')
+        ]);
+
+        \App\Models\Team::factory()->create([
+	        'name' => 'Team1',            
+        ]);
+        
+        \App\Models\Team::factory()->create([
+	        'name' => 'Team2',            
+        ]);
+
+        \App\Models\TeamUser::factory()->create([
+            'team_id' => 1,
+	        'user_id' => 1            
         ]);
 
 
