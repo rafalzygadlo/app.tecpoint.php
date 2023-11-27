@@ -18,13 +18,15 @@ return new class extends Migration
             $table->id();
             $table->string('flat_id');
             $table->boolean('active');
-            $table->integer('object_id');
+            $table->integer('object_id')->nullable();
             $table->string('street');
-            $table->integer('number');
+            $table->string('number');
             $table->integer('code');
             $table->string('city');
             $table->string('full_name')->virtualAs('concat(object_id, \' \', street, \' \', number)');         
             $table->timestamps();
+
+            $table->index('flat_id');
 
         });
     }

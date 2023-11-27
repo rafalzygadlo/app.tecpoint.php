@@ -58,7 +58,10 @@ class FlatResource extends Resource
                     ->sortable(),   
                 Tables\Columns\TextColumn::make('code')
                     ->searchable()
-                    ->sortable(),   
+                    ->sortable(),
+                Tables\Columns\BooleanColumn::make('active')
+                    ->searchable()
+                    ->sortable(),       
                 Tables\Columns\TextColumn::make('city')
                     ->searchable()
                     ->sortable(),   

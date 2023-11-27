@@ -15,7 +15,12 @@ class ImportFlatMapping
     
     public function get($record)
     {
-	    
+        if(empty($record[active]))
+            $record[active] = 0;
+        
+        if(empty($record[object_id]))
+            $record[object_id] = null;
+
         return array
         (
             "flat_id" => $record[flat_id],

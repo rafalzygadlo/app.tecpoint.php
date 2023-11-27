@@ -21,9 +21,9 @@ class ImportUserMapping
         $record[first_name] = trim(preg_replace('/\s\s+/', '', $record[first_name]));
         $record[last_name] = trim(preg_replace('/\s\s+/', '', $record[last_name]));
         
-        if($record[status] == "Aktiv") 
-            $record[status] = 1; 
-        else 
+        if($record[status] == "Aktiv")
+            $record[status] = 1;
+        else
             $record[status] = 0;
         
         if(!$record[birth_date] == null)

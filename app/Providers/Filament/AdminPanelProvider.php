@@ -63,7 +63,7 @@ class AdminPanelProvider extends PanelProvider
             ->passwordReset()
             ->emailVerification()
             ->profile()
-            ->tenant(Team::class)
+            //->tenant(Team::class)
             ;
             
     }

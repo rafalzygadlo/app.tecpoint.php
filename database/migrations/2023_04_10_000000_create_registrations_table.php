@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -13,17 +14,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addresses', function (Blueprint $table) {
+        Schema::create('registrations', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->nullable();
-            $table->string('country')->nullable();
+            $table->foreignId('flat_id')->nullable();
+            $table->foreignId('user_id')->nullable();
+            $table->string('street');
+            $table->string('house_number');
+            $table->string('flat_number');
             $table->string('code')->nullable();
-            $table->string('city')->nullable();
-            $table->string('street')->nullable();
-            $table->string('number')->nullable();            
+            $table->string('city');
             $table->timestamps();
+
         });
-        //
     }
 
     /**
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addresses');
+        Schema::dropIfExists('registrations');
     }
 };

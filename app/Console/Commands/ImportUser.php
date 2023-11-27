@@ -33,10 +33,11 @@ class ImportUser extends Command
      */
     public function handle()
     {
-	if(!file_exists('_data/users.csv'))
+
+	    if(!file_exists('_data/users.csv'))
 		return;
 
-	$reader = new FileReader('_data/users.csv', 20,"\t");
+	    $reader = new FileReader('_data/users.csv', 20,"\t");
         $mapping = new ImportUserMapping();
 
 	    \Log::debug("Import User Start");
@@ -53,22 +54,22 @@ class ImportUser extends Command
         foreach($reader->Records as $record)
         {
             $record = $mapping->get($record);
-            try
-            {
+            //try
+            //{
                 $user = User::updateOrCreate(["id" => $record['id']], $record);
                 $progressbar->advance();
  
-            } catch (\Exception $e){
+            //} catch (\Exception $e){
 
-                \Log::error($e->getMessage());
-            }
+              //  \Log::error($e->getMessage());
+            //}
         }
             
         $progressbar->finish();
 
-	Import::create(['name' => 'users']);
-	unlink("_data/users.csv");
-	\Log::debug("Import User End");
+	    Import::create(['name' => 'users']);
+	    //unlink("_data/users.csv");
+	    \Log::debug("Import User End");
         
     }
 }

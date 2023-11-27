@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-class Address extends Model
+
+class Registration extends Model
 {
     use HasFactory;
 
@@ -15,21 +15,17 @@ class Address extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'country',
+        'flat_id',
+        'user_id',
         'street',
-        'number',
+        'house_number',
+        'flat_number',
         'code',
         'city'
     ];
-     
+
     public function users()
     {
-        return $this->morphedByMany(User::class, 'addressable');
+        return $this->hasMany(User::class);
     }
-    
-    public function task()
-    {
-        return $this->morphedByMany(Task::class, 'addressable');
-    }
-
 }

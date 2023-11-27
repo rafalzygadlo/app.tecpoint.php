@@ -14,7 +14,7 @@ class AddressesRelationManager extends RelationManager
 {
     protected static string $relationship = 'addresses';
 
-    protected static ?string $recordTitleAttribute = 'name';
+    protected static ?string $recordTitleAttribute = 'full_address';
 
     public function form(Form $form): Form
     {
@@ -50,6 +50,7 @@ class AddressesRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
+                Tables\Actions\AttachAction::make(),
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([

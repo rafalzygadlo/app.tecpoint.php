@@ -9,13 +9,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
-use Filament\Models\Contracts\HasTenants;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class User extends Authenticatable implements FilamentUser, HasName, HasTenants
+class User extends Authenticatable implements FilamentUser, HasName
 {
 
     use HasApiTokens, HasFactory, Notifiable;
@@ -58,9 +57,9 @@ class User extends Authenticatable implements FilamentUser, HasName, HasTenants
         return true;
     }
 
-    public function addresses()
+    public function addresses(): MorphToMany
     {
-        return $this->hasMany(Address::class);
+        return $this->morphToMany(Address::class, 'addressable', 'addressables');
     }
 
     public function tasks()

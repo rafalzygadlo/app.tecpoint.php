@@ -2,10 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AddressResource\Pages;
-use App\Filament\Resources\AddressResource\RelationManagers;
-use App\Models\Address;
-use App\Models\User;
+use App\Filament\Resources\RegistrationResource\Pages;
+use App\Models\Registration;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -16,9 +14,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Hash;
 use Filament\Tables\Filters\SelectFilter;
 
-class AddressResource extends Resource
+class RegistrationResource extends Resource
 {
-    protected static ?string $model = Address::class;
+    protected static ?string $model = Registration::class;
 
     protected static ?string $navigationGroup = 'System';
 
@@ -46,14 +44,14 @@ class AddressResource extends Resource
                 ->schema([
                     Forms\Components\Placeholder::make('created_at')
                         ->label('Created at')
-                        ->content(fn (Address $record): ?string => $record->created_at?->diffForHumans()),
+                        ->content(fn (Registration $record): ?string => $record->created_at?->diffForHumans()),
 
                     Forms\Components\Placeholder::make('updated_at')
                         ->label('Last modified at')
-                        ->content(fn (Address $record): ?string => $record->updated_at?->diffForHumans())
+                        ->content(fn (Registration $record): ?string => $record->updated_at?->diffForHumans())
                     ])
                     
-                    ->hidden(fn (?Address $record) => $record === null),
+                    ->hidden(fn (?Registration $record) => $record === null),
             ])
             ->columns(4);
         
@@ -63,26 +61,36 @@ class AddressResource extends Resource
     {
         return $table
             ->columns([
-                //Tables\Columns\TextColumn::make('user.full_name')
-                //    ->label('Full Name')
-                //    ->searchable()
-                //    ->sortable()
-                //    ->toggleable(),
+                Tables\Columns\TextColumn::make('id')
+                ->sortable(),
+                Tables\Columns\TextColumn::make('flat_id')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('user_id')
+                ->sortable(),
+                Tables\Columns\TextColumn::make('street')
+                ->sortable(),
+                Tables\Columns\TextColumn::make('house_number')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('flat_number'),
+                Tables\Columns\TextColumn::make('code')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\TextColumn::make('city')
+                ->sortable()
+                ->searchable()
                 
-                Tables\Columns\TextColumn::make('country'),
-                Tables\Columns\TextColumn::make('code'),
-                Tables\Columns\TextColumn::make('city'),
-                Tables\Columns\TextColumn::make('number')
             ])
             ->filters([
-        
+            /*
                 SelectFilter::make('status')
                     ->options([
                         '1' => 'Active',
                         '0' => 'Inactive'
                      ])
                     ->attribute('status'),
-                   
+            */
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -109,7 +117,7 @@ class AddressResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAddress::route('/'),
+            'index' => Pages\ListRegistrations::route('/'),
         ];
     }    
 }

@@ -4,18 +4,18 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Lib\File\FileReader;
-use App\Models\Flat;
+use App\Models\Registration;
 use App\Models\Import;
-use App\Models\Mapping\ImportFlatMapping;
+use App\Models\Mapping\ImportRegistrationMapping;
 
-class ImportFlat extends Command
+class ImportRegistration extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'import:flat';
+    protected $signature = 'import:registration';
 
     /**
      * The console command description.
@@ -33,18 +33,18 @@ class ImportFlat extends Command
      */
     public function handle()
     {
-	
-        if(!file_exists('_data/flats.csv'))
-		return;
 
-	    $reader = new FileReader('_data/flats.csv', 7,"\t");
-        $mapping = new ImportFlatMapping();
+	    if(!file_exists('_data/registrations.csv'))
+		    return;
 
-	    \Log::debug("Import Flat Start");
+	    $reader = new FileReader('_data/registrations.csv', 8,"\t");
+        $mapping = new ImportRegistrationMapping();
+
+	    \Log::debug("Import Registration Start");
 
         if(!$reader->Run())
         {
-            \Log::error("Import Flat Error");
+            \Log::error("Import Registration Error");
             return;
         }
 
@@ -54,25 +54,23 @@ class ImportFlat extends Command
         foreach($reader->Records as $record)
         {
             $record = $mapping->get($record);
-            
+    
             //try
             //{
-                if(!str_contains(strtoupper($record['flat_id']),'PRIVAT'))
-                    $flat = Flat::updateOrCreate(["flat_id" => $record['flat_id']], $record);
-                
+                $user = Registration::updateOrCreate(["id" => $record['id']], $record);
                 $progressbar->advance();
  
             //} catch (\Exception $e){
 
-            //    \Log::error($e->getMessage());
+              //  \Log::error($e->getMessage());
             //}
         }
             
         $progressbar->finish();
 
-	Import::create(['name' => 'flats']);
-	//unlink("_data/flats.csv");
-	\Log::debug("Import Flat End");
+	    Import::create(['name' => 'registrations']);
+	    //unlink("_data/registrations.csv");
+	    \Log::debug("Import Registrations End");
         
     }
 }
