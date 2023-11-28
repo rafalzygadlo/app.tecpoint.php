@@ -15,6 +15,7 @@ class Registration extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'flat_id',
         'user_id',
         'street',
@@ -27,5 +28,15 @@ class Registration extends Model
     public function users()
     {
         return $this->hasMany(User::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function flats()
+    {
+        return $this->hasMany(Flat::class);
     }
 }

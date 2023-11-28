@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TasksRelationManager extends RelationManager
 {
-    protected static string $relationship = 'tasks';
+    protected static string $relationship = 'registrations';
 
     protected static ?string $recordTitleAttribute = 'title';
 
@@ -30,7 +30,11 @@ class TasksRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\ImageColumn::make('user.avatar'),
+                Tables\Columns\TextColumn::make('user.full_name')
+                ->sortable()
+                ->searchable(),
+                Tables\Columns\BooleanColumn::make('user.status'),
             ])
             ->filters([
                 //

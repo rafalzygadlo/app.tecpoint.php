@@ -120,4 +120,9 @@ class RegistrationResource extends Resource
             'index' => Pages\ListRegistrations::route('/'),
         ];
     }    
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
+    }
 }

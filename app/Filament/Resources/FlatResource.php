@@ -95,4 +95,9 @@ class FlatResource extends Resource
             'edit' => Pages\EditFlat::route('/{record}/edit')
         ];
     }    
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
+    }
 }

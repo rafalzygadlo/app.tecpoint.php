@@ -19,6 +19,8 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use App\Filament\Pages\Auth\Login;
+use Filament\Support\Enums\MaxWidth;
+ 
 use App\Models\Team;
 
 
@@ -63,6 +65,9 @@ class AdminPanelProvider extends PanelProvider
             ->passwordReset()
             ->emailVerification()
             ->profile()
+            ->sidebarCollapsibleOnDesktop();
+        
+            //->maxContentWidth(MaxWidth::Full)
             //->tenant(Team::class)
             ;
             
