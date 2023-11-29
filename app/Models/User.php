@@ -21,7 +21,7 @@ class User extends Authenticatable implements FilamentUser, HasName
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array<string>
      */
     protected $fillable = [
         'id',
@@ -38,19 +38,44 @@ class User extends Authenticatable implements FilamentUser, HasName
     ];
 
     /**
-     * @var array<int, string>
+     * @var array<string>
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token'
     ];
-
+    
+    /**
+     * field filters
+     * @var array<string>
+     */
+    protected $filters = 
+    [
+        'author_id', 
+        'category_id'
+    ];
+    
     /**
      * @var array<string, string>
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function filter($request)
+    {
+        print_r($request);
+        foreach(self::$filters as $field)
+        {
+            if(!empty($request->$field))
+            {
+                $query = self::where($field, '=', $request->$field);
+            }
+        }
+
+        return $query;
+    }
+
 
     public function canAccessPanel(Panel $panel): bool
     {
@@ -88,7 +113,6 @@ class User extends Authenticatable implements FilamentUser, HasName
     {
         return "{$this->first_name} {$this->last_name}";
     }
-
 
 
     /*
