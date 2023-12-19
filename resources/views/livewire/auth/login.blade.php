@@ -15,14 +15,14 @@
                 <h2 class="box-header">@lang('login.title') </h2>
 
                 <div class="card-body">
-                    <form wire:submit.prevent="login">
+                    <form wire:submit="login">
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="email" class="col-form-label">{{ __('email') }}</label>
                             </div>
                             <div class="col-md-12">
-                                <input value="demo" class="form-control @error('email') is-invalid @enderror" wire:model.defer="email" autocomplete="email" autofocus>
+                                <input value="demo" class="form-control @error('email') is-invalid @enderror" wire:model="email" autocomplete="email" autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -36,7 +36,7 @@
                                 <label for="password" class="col-form-label">{{ __('password') }}</label>
                             </div>
                             <div class="col-md-12">
-                                <input value="demo" type="password" class="form-control @error('password') is-invalid @enderror" wire:model.defer="password" name="password" autocomplete="current-password">
+                                <input value="demo" type="password" class="form-control @error('password') is-invalid @enderror" wire:model="password" name="password" autocomplete="current-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

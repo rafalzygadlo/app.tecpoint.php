@@ -13,7 +13,7 @@
             <h1 class="box-header">@lang('apply.title') </h1>
             <hr>
                 <div class="card-body">
-                    <form wire:submit.prevent="submit">
+                    <form wire:submit="submit">
                         @csrf
                         @include('livewire.personal.personal')
                         <hr>
@@ -30,7 +30,7 @@
                                         {{ __('apply.policy1') }}
                                         {{ __('apply.policy2') }}<a href="mailto:info@tec-point.de">info@tec-point.de</a>
                                     </label>    
-                                    <input class="form-check-input @error('policy') is-invalid @enderror" type="checkbox" wire:model.defer="policy">
+                                    <input class="form-check-input @error('policy') is-invalid @enderror" type="checkbox" wire:model="policy">
                                     @error('policy')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

@@ -13,12 +13,12 @@
             <h1 class="box-header">@lang('apply.title') </h1>
             <hr>
                 <div class="card-body">
-                    <form action="post" wire:submit.prevent="submit">
+                    <form action="post" wire:submit="submit">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.first_name')</label>
                             <div class="col-md-8">
-                                <input class="form-control @error('first_name') is-invalid @enderror" wire:model.defer="first_name">
+                                <input class="form-control @error('first_name') is-invalid @enderror" wire:model="first_name">
                                 @error('first_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.last_name')</label>
                             <div class="col-md-8">
-                                <input class="form-control @error('last_name') is-invalid @enderror" wire:model.defer="last_name">
+                                <input class="form-control @error('last_name') is-invalid @enderror" wire:model="last_name">
                                 @error('last_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-4 col-form-label">@lang('apply.email')</label>
                             <div class="col-md-8">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model.defer="email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" wire:model="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -54,7 +54,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-form-label">@lang('apply.telephone')</label>
                             <div class="col-md-8">    
-                                <input type="tel" class="form-control @error('telephone') is-invalid @enderror" wire:model.defer="telephone">
+                                <input type="tel" class="form-control @error('telephone') is-invalid @enderror" wire:model="telephone">
                                 @error('telephone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
                                         {{ __('apply.policy1') }}
                                         {{ __('apply.policy2') }}<a href="mailto:info@tec-point.de">info@tec-point.de</a>
                                     </label>    
-                                    <input class="form-check-input @error('policy') is-invalid @enderror" type="checkbox" wire:model.defer="policy">
+                                    <input class="form-check-input @error('policy') is-invalid @enderror" type="checkbox" wire:model="policy">
                                     @error('policy')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

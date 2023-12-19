@@ -43,12 +43,12 @@
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo"><img src="../img/logo-small.png" alt=""></a>
       <h1 class="logo me-auto"><a href="index.html">Tec-Point<span>.</span></a></h1>
-      
+      <!--
       <a class="nav-link-flag" href="/en/index.html"><span class="flag-icon flag-icon-en"></span></a>
       <a class="nav-link-flag" href="/pl/index.html"><span class="flag-icon flag-icon-pl"></span></a>
       <a class="nav-link-flag" href="/ro/index.html"><span class="flag-icon flag-icon-ro"></span></a>
       <a class="nav-link-flag" href="/ru/index.html"><span class="flag-icon flag-icon-ru"></span></a>
-      
+      -->
       
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -83,12 +83,14 @@
       </div>
     </div>
 
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
+  
   <section id="about" class="about">
     <div class="section-title">
-       <h2>Info</h2>
+       <h2>Info - Consulting</h2>
      </div>
      
      <div class="container" data-aos="fade-up">
@@ -117,7 +119,6 @@
     </div>
    
     </div>
-</div>
   
   </section>
 
@@ -167,6 +168,63 @@
       </div>
     </section>
 
+
+    <section id="about" class="about">
+    <div class="section-title">
+       <h2>Info - Service</h2>
+     </div>
+     
+     <div class="container" data-aos="fade-up">
+     <div class="row no-gutters">
+        <div class="content col-xl-6 text-center">
+          <img src="img/logo-service.png" alt="">
+        </div>
+        <div class="col-xl-6 text-center">
+            <b>Tec-Point GmbH</b><br>
+            Kupferstr. 10<br>
+            33378 Rheda-Wiedenbrück<br>       
+              Telefonnummer: (05242) 594560<br>
+              Faxnummer: (05242) 935310<br>
+            
+        </div>
+     </div>
+    <hr>        
+      <div class="content col-xl-12">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+      <hr>
+    </div>
+   
+    </div>
+  
+  </section>
+
+
+    <section id="counts" class="counts section-bg">
+    <div class="section-title">
+       <h2>Service</h2>
+     </div>
+      <div class="container" data-aos="fade-up">   
+        <div class="row">
+  
+          <div class="col-lg-12 col-md-12 mt-5 mt-lg-0">
+            <div class="count-box">
+              <a href="de/service.html"><img src="img/flag/de.png"></a>
+              <br><br>
+              <h4>Deutsch</h4>
+            </div>
+          </div>
+  
+        </div>
+    
+      </div>
+    </section>
+
+  
 
 
   </main><!-- End #main -->
