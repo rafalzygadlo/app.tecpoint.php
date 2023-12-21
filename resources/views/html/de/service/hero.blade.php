@@ -6,7 +6,7 @@
     <div class="col-xl-6">
       <h1>Service hausmeister</h1>
       <h2>Work on production in the largest food company in Europe</h2>
-      <a href="apply" class="btn-get-started scrollto">Apply</a>
+      <a href="#tabs" class="btn-get-started scrollto">Start</a>
     </div>
   </div>
 </div>

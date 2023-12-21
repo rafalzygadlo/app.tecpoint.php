@@ -6,6 +6,7 @@
   <title>Tec-Point</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <link href="../img/favicon.png" rel="icon">
 
   <!-- Vendor CSS Files -->
   <link href="../vendor/aos/aos.css" rel="stylesheet">

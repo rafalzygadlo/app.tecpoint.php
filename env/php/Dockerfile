@@ -18,6 +18,9 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-install exif
 RUN docker-php-ext-configure exif 
 
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
+
 #zip
 RUN apt install zip -y
 RUN apt install git -y

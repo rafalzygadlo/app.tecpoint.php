@@ -1,7 +1,7 @@
 <!-- ======= About Section ======= -->
 <section id="about" class="about section-bg">
       <div class="section-title">
-        <h2>About</h2>
+        <h2>Über uns</h2>
       </div>
       <div class="container " data-aos="fade-up">
 
@@ -39,7 +39,13 @@
                 
                 <div class="col-md-6 icon-box " data-aos="fade-up" data-aos-delay="400">
                   <i class="bx bx-shield"></i>
-                  <h4>Flats</h4>
+                  <h4>Narzedzia</h4>
+                  <p>Flats only 3 km away from the place of work.</p>
+                </div>
+
+                <div class="col-md-6 icon-box " data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4>team</h4>
                   <p>Flats only 3 km away from the place of work.</p>
                 </div>
               

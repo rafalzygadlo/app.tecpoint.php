@@ -327,7 +327,7 @@
         <ul class="faq-list accordion" data-aos="fade-up">
           <li>
             <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1" aria-expanded="false">How much will I earn on my hand?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list" style="">
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p class="fst-italic">
                 Earnings depend on the number of hours worked, tax group, and the number of children you have.
               </p>
@@ -335,7 +335,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed" aria-expanded="false">What documents should I take with me?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list" style="">
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p class="fst-italic">
                 ID card, if you have worked in Germany before, you will also need a tax number.
               </p>

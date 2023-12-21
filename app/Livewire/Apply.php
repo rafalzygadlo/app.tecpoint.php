@@ -14,8 +14,6 @@ class Apply extends Component
     
     public $last_name;
     
-    public $birth_date;
-    
     public $email;
     
     public $telephone;
@@ -23,10 +21,10 @@ class Apply extends Component
     public $policy;
 
 
-    protected $rules = [
+    protected $rules = 
+    [
         'first_name' => 'required',
         'last_name' => 'required',
-        //'birth_date' => 'required|date',
         'email' => 'required|email|unique:users',
         'policy' => 'accepted'
     ];
@@ -43,7 +41,6 @@ class Apply extends Component
             'email.required' => __('apply.email.required'),
             'first_name.required' => __('apply.first_name.required'),
             'last_name.required' => __('apply.last_name.required'),
-            //'birth_date.required' => __('apply.birth_date.required'),
             'email.required' => __('apply.email.required'),
             'email.email' => __('apply.email.email'),
 	        'email.unique' => __('apply.email.unique'),

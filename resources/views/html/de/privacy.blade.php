@@ -5,36 +5,36 @@
       <p></p>    
     <div class="row">
     <div class="col-lg-12 col-md-12">
-        
-      <h2>Data collected automatically</h2>
-    
-      <p>During your visit to our website, data about your visit is automatically collected, e.g. your IP address, domain name, browser type, operating system type, etc.</p>
-    
-      <h2>Data collected when you contact us</h2>
-      <p>When you contact us via the website, telephone, e-mail, etc., you provide us with your personal data, e.g. name, surname, e-mail address, etc.</p>
-    
-      <h2>How do we use your data ?</h2>
-      <p>Under no circumstances will we sell the data collected about you to third parties.</p>
-      <p>The data collected during registration will be used only to enable you to log into our system.</p>
-      <p>If you subscribed to our Newsletter, or otherwise agreed to receive it, we will use your data to send you our Newsletter. You will be asked if you want to receive the Newsletter during registration.</p>
-      <p>Data collected automatically can be used to analyze user behavior on our website, collect demographic data about our users, or to personalize the content of our websites. These data are collected automatically about each user. The data collected during the correspondence between you and our website will be used only to answer your inquiry.</p>
-      <p>In the event of an inspection by the General Inspectorate for Personal Data Protection, your data may be made available to the employees of the Inspectorate in accordance with the Personal Data Protection Act.</p>
-      <p>In the event of a breach of the Regulations of our website, violation of the law, or when it will be required by law, we may disclose your data to judicial authorities.</p>
-    
-      <h2>Google Analytics</h2>
-      <p>We do not use this service.</p>     
-    
-      <h2>How will we contact you ?</h2>
-      <p>If you subscribed to our Newsletter, or otherwise agreed to receive it, you will receive our Newsletter by e-mail.</p>
-    
-      <h2>The use of cookies ("cookies")</h2>
-      <p>Our website does not use cookies.</p>
-    
-      <h2>Changes to our privacy policy.</h2>
-      <p>We reserve the right to change the above privacy policy by publishing a new privacy policy on this website.</p>
-    
-      <h2>Contact</h2>
-      <p>If you have additional questions regarding privacy protection, please contact us using the contact form on the contact page.</p>
+  
+    <h2>Datenautomatik gesammelt</h2>
+    <p>Während Ihres Besuchs auf unserer Website werden automatisch Daten über Ihren Besuch gesammelt, z.B. Ihre IP-Adresse, Domain-Name, Browsertyp, Betriebssystemtyp usw.</p>
+
+    <h2>Daten bei Kontaktaufnahme mit uns gesammelt</h2>
+    <p>Wenn Sie uns über die Website, Telefon, E-Mail usw. kontaktieren, stellen Sie uns persönliche Daten zur Verfügung, wie z.B. Name, Vorname, E-Mail-Adresse usw.</p>
+
+    <h2>Wie verwenden wir Ihre Daten?</h2>
+    <p>Unter keinen Umständen verkaufen wir die über Sie gesammelten Daten an Dritte.</p>
+    <p>Die während der Anmeldung gesammelten Daten werden nur verwendet, um Ihnen das Einloggen in unser System zu ermöglichen.</p>
+    <p>Wenn Sie sich für unseren Newsletter angemeldet haben oder anderweitig zugestimmt haben, ihn zu erhalten, verwenden wir Ihre Daten, um Ihnen unseren Newsletter zu senden. Sie werden während der Anmeldung gefragt, ob Sie den Newsletter erhalten möchten.</p>
+    <p>Automatisch gesammelte Daten können zur Analyse des Nutzerverhaltens auf unserer Website, zur Erfassung demografischer Daten über unsere Benutzer oder zur Personalisierung des Inhalts unserer Websites verwendet werden. Diese Daten werden automatisch über jeden Benutzer gesammelt. Die während der Korrespondenz zwischen Ihnen und unserer Website gesammelten Daten werden nur zur Beantwortung Ihrer Anfrage verwendet.</p>
+    <p>Im Falle einer Inspektion durch die Generalinspektion für den Datenschutz können Ihre Daten gemäß dem Datenschutzgesetz den Mitarbeitern der Inspektion zur Verfügung gestellt werden.</p>
+    <p>Im Falle eines Verstoßes gegen die Bestimmungen unserer Website, einer Gesetzesverletzung oder wenn dies gesetzlich erforderlich ist, können wir Ihre Daten an die Justizbehörden weitergeben.</p>
+
+    <h2>Google Analytics</h2>
+    <p>Wir verwenden diesen Dienst nicht.</p>
+
+    <h2>Wie werden wir Sie kontaktieren?</h2>
+    <p>Wenn Sie sich für unseren Newsletter angemeldet haben oder anderweitig zugestimmt haben, ihn zu erhalten, erhalten Sie unseren Newsletter per E-Mail.</p>
+
+    <h2>Verwendung von Cookies ("Cookies")</h2>
+    <p>Unsere Website verwendet keine Cookies.</p>
+
+    <h2>Änderungen unserer Datenschutzrichtlinie</h2>
+    <p>Wir behalten uns das Recht vor, die oben genannte Datenschutzrichtlinie durch Veröffentlichung einer neuen Datenschutzrichtlinie auf dieser Website zu ändern.</p>
+
+    <h2>Kontakt</h2>
+    <p>Wenn Sie weitere Fragen zum Datenschutz haben, kontaktieren Sie uns bitte über das Kontaktformular auf der Kontaktseite.</p>
+
     </div>
   </div>
 </div>
