@@ -26,7 +26,7 @@
               <i class="bx bx-envelope"></i>
               <h3>E-mail</h3>
               <br>
-              <p><a href="mailto:jobs.en@tec-point.de">immobilien@tec-point.de</a></p>
+              <p><a href="mailto:immobilien@tec-point.de">immobilien@tec-point.de</a></p>
             </div>
           </div>
 
