@@ -95,7 +95,7 @@
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box " data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-tree"></i>
-              <h4>Schneeräumung</h4>
+              <h4>Schneeräumung ()</h4>
               <p>Maßgeschneiderte Reinigungspläne entsprechend den Anforderungen des Kunden.Flexibilität in Bezug auf Reinigungsintervalle und -zeiten.<br></p>
             </div>
           </div>
