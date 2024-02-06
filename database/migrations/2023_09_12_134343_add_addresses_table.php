@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('country')->nullable();
-            $table->string('code')->nullable();
+            $table->string('zip')->nullable();
             $table->string('city')->nullable();
             $table->string('street')->nullable();
             $table->string('number')->nullable();            
 
             $table->string('full_address')->virtualAs(
-              "CONCAT(street, ', ', code, ' ', city)"
+              "CONCAT(street, ', ', zip, ' ', city)"
             );
             $table->timestamps();
         });
