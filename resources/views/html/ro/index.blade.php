@@ -5,7 +5,7 @@
   <header id="header" class="fixed-top d-flex align-items-center header-scrolled">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo"><img src="../img/logo-small.png" alt=""></a>
-      <h1 class="logo me-auto"><a href="index.html">Tec-Point<span>.</span></a></h1>
+      <h1 class="logo me-auto"><a href="/">Tec-Point<span>.</span></a></h1>
       
       <a class="nav-link-flag" href="/en/index.html"><span class="flag-icon flag-icon-en"></span></a>
       <a class="nav-link-flag" href="/pl/index.html"><span class="flag-icon flag-icon-pl"></span></a>

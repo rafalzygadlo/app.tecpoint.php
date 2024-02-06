@@ -9,14 +9,39 @@ use App\Models\User;
 class UserController extends Controller
 {
     //
+    /**
+     * field filters
+     * @var array<string>
+     */
+    protected $filters = 
+    [
+        'name', 
+        'first_name'
+    ];
+    
+
+    public function filter1(Request $request)
+    {
+        foreach($this->filters as $field)
+        {
+            if(!empty($request->$field))
+            {
+                $query = User::where($field,'=',$request->$field);
+            }
+        }
+
+        return $query->get();
+    }
+
 
     public function show($id)
     {
         return User::findOrFail($id);
     }
 
-    public function index()
+    public function index(Request $request)
     {
         return User::all();
+
     }
 }

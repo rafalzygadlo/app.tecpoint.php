@@ -22,12 +22,17 @@ services:
     container_name: app.tecpoint.php
     image: php:8.2-fpm
     build: './php/'
+    extra_hosts:
+     - "host.docker.internal:host-gateway"
     expose:
        - 9000
     links:
        - mysql
     networks:
       - tecpoint-dev
+    environment:
+      XDEBUG_MODE: debug
+      XDEBUG_CONFIG: client_host=host.docker.internal client_port=9003
     volumes:
       - ./..:/var/www/html
     restart: unless-stopped

@@ -4,7 +4,7 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <a href="index.html" class="logo"><img src="../img/logo-small.png" alt=""></a>
-      <h1 class="logo me-auto"><a href="index.html">Tec-Point<span>.</span></a></h1>
+      <h1 class="logo me-auto"><a href="/">Tec-Point<span>.</span></a></h1>
       
       <a class="nav-link-flag" href="/en/index.html"><span class="flag-icon flag-icon-en"></span></a>
       <a class="nav-link-flag" href="/pl/index.html"><span class="flag-icon flag-icon-pl"></span></a>
@@ -327,7 +327,7 @@
         <ul class="faq-list accordion" data-aos="fade-up">
           <li>
             <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1" aria-expanded="false">How much will I earn on my hand?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list" style="">
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p class="fst-italic">
                 Earnings depend on the number of hours worked, tax group, and the number of children you have.
               </p>
@@ -335,7 +335,7 @@
           </li>
           <li>
             <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed" aria-expanded="false">What documents should I take with me?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list" style="">
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p class="fst-italic">
                 ID card, if you have worked in Germany before, you will also need a tax number.
               </p>
