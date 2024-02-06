@@ -7,6 +7,7 @@
 
 <main id="main">
 
+@include('html.de.service.client')
 @include('html.de.service.information')
 @include('html.de.service.about')
 @include('html.de.service.count')

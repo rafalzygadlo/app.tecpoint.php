@@ -3,7 +3,7 @@
       <div class="container " data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2>Dienstleistungen</h2>
           <p>Wie können wir Ihnen helfen ?</p>
         </div>
         <h3>Gebäude und Hofreinigung</h3>
@@ -95,32 +95,32 @@
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box " data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-tree"></i>
-              <h4>Schneeräumung ()</h4>
-              <p>Maßgeschneiderte Reinigungspläne entsprechend den Anforderungen des Kunden.Flexibilität in Bezug auf Reinigungsintervalle und -zeiten.<br></p>
+              <h4>Rasenpflege</h4>
+              <p>Regelmäßiges Mähen des Rasens für ein gepflegtes Erscheinungsbild. Vertikutieren und Düngen für einen gesunden Rasen.<br></p>
             </div>
           </div>
 
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box " data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-calendar4-week"></i>
-              <h4>Eisbeseitigung</h4>
-              <p>Streuen von Auftausalz oder abstumpfenden Mitteln, um Eisbildung zu verhindern. Entfernung von bereits gebildetem Eis.<br></p>
+              <h4>Hecken und Strauchschnitt</h4>
+              <p>Fachgerechtes Schneiden von Hecken und Sträuchern für eine schöne Form und gesundes Wachstum. Entsorgung von Schnittabfällen.<br></p>
             </div>
            </div>
            
            <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box " data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-calendar4-week"></i>
-              <h4>Schneeräumung</h4>
-              <p>Maßgeschneiderte Reinigungspläne entsprechend den Anforderungen des Kunden.Flexibilität in Bezug auf Reinigungsintervalle und -zeiten.<br></p>
+              <h4>Pflanzenservice</h4>
+              <p>Neuanpflanzungen nach individuellen Wünschen. Pflege bestehender Pflanzen und Beete.<br></p>
             </div>
           </div>
 
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box " data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-calendar4-week"></i>
-              <h4>Eisbeseitigung</h4>
-              <p>Streuen von Auftausalz oder abstumpfenden Mitteln, um Eisbildung zu verhindern. Entfernung von bereits gebildetem Eis.<br></p>
+              <h4>Gartenreinigung</h4>
+              <p>Entfernung von Laub, Ästen und anderen Gartenabfällen. Reinigung von Gartenwegen und Terrassen.<br></p>
             </div>
           </div>
 

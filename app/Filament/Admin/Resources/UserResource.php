@@ -138,11 +138,7 @@ class UserResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
-            ])
-            //->contentGrid([
-            //    'sm' => 2,
-            //    'sm' => 3,
-            //]);
+            ])->defaultSort('id','desc');
             ;
     }
     

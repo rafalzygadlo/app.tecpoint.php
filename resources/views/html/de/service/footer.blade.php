@@ -19,11 +19,11 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>Links</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#about">Angebot</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#services">Dienstleistungen</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#faq">FAQ</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#contact">Kontakt</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="privacy.html">Datenschutzerklärung</a></li>
+          <li><i class="bx bx-chevron-right"></i><a href="#about">Über uns</a></li>
+          <li><i class="bx bx-chevron-right"></i><a href="#services">Dienstleistungen</a></li>
+          <li><i class="bx bx-chevron-right"></i><a href="#portfolio">Portfolio</a></li>
+          <li><i class="bx bx-chevron-right"></i><a href="#faq">FAQ</a></li>
+          <li><i class="bx bx-chevron-right"></i><a href="#contact">Kontakt</a></li>
         </ul>
       </div>
 

@@ -15,7 +15,7 @@
       <div class="col-lg-4 col-md-12 mt-5 mt-lg-0">
         <div class="count-box">
           <i class="bi bi-journal-richtext"></i>
-          <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="0" class="purecounter">15</span>
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="0" class="purecounter">15</span>
           <p>We have been operating for years</p>
         </div>
       </div>
