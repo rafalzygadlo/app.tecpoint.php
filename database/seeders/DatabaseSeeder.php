@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Address;
 use Closure;
 use Filament\Notifications\Actions\Action;
 use Filament\Notifications\Notification;
@@ -27,8 +28,15 @@ class DatabaseSeeder extends Seeder
         ]);
 	
 	    $this->command->warn(PHP_EOL . 'Creating users...');
-        $user = $this->withProgressBar(1000, fn () => User::factory()->count(10)->create());
+        //$user = $this->withProgressBar(1000, fn () => User::factory()->count(10)->create());
+        
+
+        
+        $customers = $this->withProgressBar(100, fn () => User::factory(1)
+            ->has(Address::factory()->count(rand(1, 3)))
+            ->create());
         $this->command->info('Users created.');
+        //$this->command->info('Customers created.');
             
         
     }

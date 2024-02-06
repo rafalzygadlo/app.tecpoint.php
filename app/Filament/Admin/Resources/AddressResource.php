@@ -31,7 +31,7 @@ class AddressResource extends Resource
             Forms\Components\TextInput::make('country')
                 ->required()
                 ->columnSpan('full'),                
-            Forms\Components\TextInput::make('code')
+            Forms\Components\TextInput::make('zip')
                 ->required(),
             Forms\Components\TextInput::make('city')
                 ->columnSpan(3)
@@ -70,7 +70,7 @@ class AddressResource extends Resource
                 //    ->toggleable(),
                 
                 Tables\Columns\TextColumn::make('country'),
-                Tables\Columns\TextColumn::make('code'),
+                Tables\Columns\TextColumn::make('zip'),
                 Tables\Columns\TextColumn::make('city'),
                 Tables\Columns\TextColumn::make('number')
             ])
