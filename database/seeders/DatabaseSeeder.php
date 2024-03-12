@@ -30,12 +30,14 @@ class DatabaseSeeder extends Seeder
 	    $this->command->warn(PHP_EOL . 'Creating users...');
         //$user = $this->withProgressBar(1000, fn () => User::factory()->count(10)->create());
         
-
-        
-        $customers = $this->withProgressBar(100, fn () => User::factory(1)
+        $users = $this->withProgressBar(1000, fn () => User::factory(1)
             ->has(Address::factory()->count(rand(1, 3)))
             ->create());
         $this->command->info('Users created.');
+	foreach($users as $user)
+	{
+	    $user->update
+	}
         //$this->command->info('Customers created.');
             
         

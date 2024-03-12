@@ -61,8 +61,8 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->login(Login::class)
-            ->registration()
-            ->passwordReset()
+            //->registration()
+            //->passwordReset()
             ->emailVerification()
             ->profile()
             ->sidebarCollapsibleOnDesktop();

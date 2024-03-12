@@ -17,7 +17,8 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        return [
+	    return [
+	     
             'hr' => fake()->numerify('########'),
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
