@@ -27,6 +27,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1' ], 
 Route::group(['middleware' => ['auth:sanctum']], function ()
 {
   Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\v1' ], function () {
+  Route::get('user/active','UserController@active');
   Route::get('user','UserController@index');
   Route::get('user/{id}', 'UserController@show');
   });

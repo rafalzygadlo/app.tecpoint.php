@@ -39,9 +39,14 @@ class UserController extends Controller
         return User::findOrFail($id);
     }
 
+    public function active(Request $request)
+    {
+	return User::where('status','=','1')->orderBy('id','desc')->get();
+    }		    
+
     public function index(Request $request)
     {
-        return User::all();
+        return User::orderBy('id','desc')->get();;
 
     }
 }
